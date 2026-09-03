@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>tuiwasm — Go terminal libraries in the browser</title>
+<style>
+  html, body { margin: 0; height: 100%; overflow: hidden;
+               background: #10131a; color: #d3d7cf; }
+  body { display: flex; flex-direction: column;
+         font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 13px; }
+  header { flex: 0 0 auto; padding: 7px 12px; background: #171b24;
+           border-bottom: 1px solid #262b34; line-height: 1.6; }
+  header a { color: #729fcf; }
+  header b { color: #ad7fa8; }
+  /* The per-demo links. There are a couple of dozen, so they are folded away
+     rather than given a third of the header. */
+  header details { display: inline; }
+  header summary { display: inline; cursor: pointer; color: #729fcf; }
+  #demolinks { display: block; padding: 6px 0 2px; line-height: 1.9;
+               border-top: 1px solid #262b34; margin-top: 6px; }
+  #demolinks a { margin-right: 4px; padding: 1px 5px; border-radius: 3px;
+                 background: #1d222c; text-decoration: none; }
+  #demolinks a:hover { background: #2b3240; }
+  /* Windows are positioned against this element, so it has to be the one
+     that fills what is left rather than the body. */
+  #desktop { flex: 1 1 auto; min-height: 0; position: relative;
+             background:
+               radial-gradient(circle at 20% 15%, #1b2130 0%, #10131a 55%),
+               #10131a; }
+  #boot { padding: 14px; color: #6b7280; }
+  /* One demo with the page to itself, reached as ?demo=name. It should look
+     like the terminal it would run in and nothing else, so the page chrome
+     goes and the terminal gets the whole viewport. Set from Go once the demo
+     is found; see cmd/desktop. */
+  body.solo header { display: none; }
+  body.solo #desktop { background: #000; }
+</style>
+</head>
+<body>
+<header>
+  <b>tuiwasm</b> — Go terminal UI libraries, each in its own window ·
+  <a href="https://github.com/0magnet/desk">desk</a> +
+  <a href="https://github.com/0magnet/xterm-go">xterm-go</a> +
+  <a href="https://github.com/gdamore/tcell">tcell</a>
+  &nbsp;·&nbsp; more in the launcher, bottom left
+  &nbsp;·&nbsp; standard Go build — <a href="tinygo/">TinyGo build</a>
+  &nbsp;·&nbsp;
+  <details>
+    <summary>one per page</summary>
+    <!-- Filled from the demo registry once the module is up, so the list
+         cannot drift from what is actually registered. Every link is this same
+         page and this same .wasm, with ?demo= set. -->
+    <nav id="demolinks"></nav>
+  </details>
+</header>
+<div id="desktop"><div id="boot">loading…</div></div>
+<script src="wasm_exec.js"></script>
+<script>
+  // The .wasm is fetched compressed: GitHub Pages serves application/wasm
+  // with content-encoding gzip on its own, so there is nothing to configure.
+  const go = new Go();
+  const boot = document.getElementById("boot");
+  WebAssembly.instantiateStreaming(fetch("desktop.wasm"), go.importObject)
+    .then((r) => { if (boot) boot.remove(); go.run(r.instance); })
+    .catch((err) => {
+      if (boot) boot.textContent = "failed to start: " + err;
+      console.error(err);
+    });
+</script>
+</body>
+</html>
