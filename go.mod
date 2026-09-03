@@ -3,15 +3,15 @@ module github.com/0magnet/tuiwasm
 go 1.26.5
 
 require (
-	github.com/0magnet/calvin v0.0.0-20260827183707-92b02e6b3d3d
+	github.com/0magnet/calvin v0.0.0-20260903022122-1518a55e53f3
 	github.com/0magnet/coloredcobra v1.0.2
-	github.com/0magnet/desk v0.0.0-20260828165122-3c2724676aec
+	github.com/0magnet/desk v0.0.0-20260903023351-72618068a49a
 	github.com/0magnet/desk/panes v0.0.0-20260828165122-3c2724676aec
 	github.com/0magnet/glamour v1.0.1-0.20260828223301-bc6921785a82
 	github.com/0magnet/proxima5 v0.0.0-20260828143304-69dc438364d2
 	github.com/0magnet/proxima5/v2 v2.0.0-20260902091202-e45c029b343b
-	github.com/0magnet/termanim v0.0.0-20260827230242-7dd03f4a292e
-	github.com/0magnet/xterm-go v0.0.0-20260827183933-3cefcc1ae905
+	github.com/0magnet/termanim v0.0.0-20260903022407-3c9a5cc9ee76
+	github.com/0magnet/xterm-go v0.0.0-20260903022452-f823b747bcfe
 	github.com/charmbracelet/lipgloss v1.1.1-0.20250404203927-76690c660834
 	github.com/gdamore/tcell/v2 v2.13.10
 	github.com/guptarohit/asciigraph v0.10.0
@@ -37,8 +37,8 @@ require (
 	github.com/0magnet/afero v1.15.1-0.20260816202415-9f9d46a34dcd // indirect
 	github.com/0magnet/sh/v3 v3.13.2-0.20260818190530-13d0024da85c // indirect
 	github.com/0magnet/u-root v0.16.1-0.20260814161052-156e0b67262b // indirect
-	github.com/0magnet/websh v0.0.0-20260828165124-20fbdb64764c // indirect
-	github.com/0magnet/winbox-go v0.0.0-20260827183716-646222bcc7a8 // indirect
+	github.com/0magnet/websh v0.0.0-20260903023334-1f972db1b545 // indirect
+	github.com/0magnet/winbox-go v0.0.0-20260903022448-a6277067b114 // indirect
 	github.com/alecthomas/chroma/v2 v2.27.0 // indirect
 	github.com/aymanbagabas/go-osc52/v2 v2.0.1 // indirect
 	github.com/benhoyt/goawk v1.31.0 // indirect
