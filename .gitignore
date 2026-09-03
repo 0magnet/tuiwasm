@@ -1,0 +1,8 @@
+# Build output. The page is source; the wasm and its loader are not.
+web/*.wasm
+web/wasm_exec.js
+
+# `go build ./cmd/desktop` with no -o drops the binary here under the command's
+# name. It is a build artifact and a big one — 31MB of wasm — and it was
+# committed once by accident.
+/desktop

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>tuiwasm — Go terminal libraries in the browser</title>
+<style>
+  html, body { margin: 0; height: 100%; overflow: hidden;
+               background: #10131a; color: #d3d7cf; }
+  body { display: flex; flex-direction: column;
+         font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 13px; }
+  header { flex: 0 0 auto; padding: 7px 12px; background: #171b24;
+           border-bottom: 1px solid #262b34; line-height: 1.6; }
+  header a { color: #729fcf; }
+  header b { color: #ad7fa8; }
+  /* Windows are positioned against this element, so it has to be the one
+     that fills what is left rather than the body. */
+  #desktop { flex: 1 1 auto; min-height: 0; position: relative;
+             background:
+               radial-gradient(circle at 20% 15%, #1b2130 0%, #10131a 55%),
+               #10131a; }
+  #boot { padding: 14px; color: #6b7280; }
+</style>
+</head>
+<body>
+<header>
+  <b>tuiwasm</b> — Go terminal UI libraries, each in its own window ·
+  <a href="https://github.com/0magnet/desk">desk</a> +
+  <a href="https://github.com/0magnet/xterm-go">xterm-go</a> +
+  <a href="https://github.com/gdamore/tcell">tcell</a>
+  &nbsp;·&nbsp; more in the launcher, bottom left
+  &nbsp;·&nbsp; TinyGo build — <a href="../">standard Go build</a>
+</header>
+<div id="desktop"><div id="boot">loading…</div></div>
+<script src="wasm_exec.js"></script>
+<script>
+  // The .wasm is fetched compressed: GitHub Pages serves application/wasm
+  // with content-encoding gzip on its own, so there is nothing to configure.
+  const go = new Go();
+  const boot = document.getElementById("boot");
+  WebAssembly.instantiateStreaming(fetch("desktop.wasm"), go.importObject)
+    .then((r) => { if (boot) boot.remove(); go.run(r.instance); })
+    .catch((err) => {
+      if (boot) boot.textContent = "failed to start: " + err;
+      console.error(err);
+    });
+</script>
+</body>
+</html>
