@@ -41,7 +41,7 @@ require (
 	github.com/0magnet/afero v1.15.1-0.20260816202415-9f9d46a34dcd // indirect
 	github.com/0magnet/sh/v3 v3.13.2-0.20260818190530-13d0024da85c
 	github.com/0magnet/u-root v0.16.1-0.20260814161052-156e0b67262b // indirect
-	github.com/0magnet/websh v0.0.0-20260903023334-1f972db1b545
+	github.com/0magnet/websh v0.0.0-20260904213706-40a9dcd10c23
 	github.com/0magnet/winbox-go v0.0.0-20260903022448-a6277067b114 // indirect
 	github.com/alecthomas/chroma/v2 v2.27.0 // indirect
 	github.com/aymanbagabas/go-osc52/v2 v2.0.1 // indirect

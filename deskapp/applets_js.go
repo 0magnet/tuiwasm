@@ -64,6 +64,12 @@ func runToilet(_ context.Context, _ *shell.Shell, hc *interp.HandlerContext, arg
 		case "--fonts":
 			return listFonts(hc)
 		default:
+			// An unrecognised flag is refused rather than rendered. Silently
+			// treating -X as text would print it in big letters and look like
+			// the flag had worked.
+			if len(a) > 1 && a[0] == '-' {
+				return unknownFlag(hc, "toilet", a)
+			}
 			words = append(words, a)
 		}
 	}
@@ -96,6 +102,13 @@ func runLolcat(_ context.Context, _ *shell.Shell, hc *interp.HandlerContext, arg
 			}
 		case "-i", "--invert":
 			opts.Invert = true
+		default:
+			// -a/--animate in particular: it never returns, and an applet that
+			// never returns holds the terminal until Ctrl+C. Refusing beats
+			// accepting a flag and not honouring it.
+			if len(a) > 1 && a[0] == '-' {
+				return unknownFlag(hc, "lolcat", a)
+			}
 		}
 	}
 
@@ -117,6 +130,15 @@ func listFonts(hc *interp.HandlerContext) int {
 		}
 	}
 	return 0
+}
+
+// unknownFlag refuses a flag this applet does not implement, and says where
+// the rest of them live. These are a slice of each port's CLI, not the whole
+// of it, and a shell that quietly ignores half a command line is worse than
+// one that says so.
+func unknownFlag(hc *interp.HandlerContext, cmd, flag string) int {
+	return fail(hc, cmd+": unknown option "+flag+
+		"\n"+cmd+": this is a subset for the shell; the full CLI is in github.com/0magnet/"+cmd+"-go")
 }
 
 func fail(hc *interp.HandlerContext, msg string) int {

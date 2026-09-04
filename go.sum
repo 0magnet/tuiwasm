@@ -36,8 +36,8 @@ github.com/0magnet/toilet-go v0.0.0-20260904203637-742aae55506f h1:HI3K3bb9v7eDC
 github.com/0magnet/toilet-go v0.0.0-20260904203637-742aae55506f/go.mod h1:aieJocdQNYVpSi/LsI2Sd1srhjCelnA0ZLbganofjbI=
 github.com/0magnet/u-root v0.16.1-0.20260814161052-156e0b67262b h1:1p4E2ok/rmNJU2LsGx6iMl0bIAMgl1QOC2H8doC+9ww=
 github.com/0magnet/u-root v0.16.1-0.20260814161052-156e0b67262b/go.mod h1:fId14v+rNp1A0ZKHJPZZyiu9dfgWKEs7nbyvKrku3bo=
-github.com/0magnet/websh v0.0.0-20260903023334-1f972db1b545 h1:x6XEkUQ/wXJEOpRUmxhq56lCH3TZfq80ia/P5lnjjPk=
-github.com/0magnet/websh v0.0.0-20260903023334-1f972db1b545/go.mod h1:zM6emVi15GzCgqt30dRv3cWxBVgt3A+W7Fwx3GZPcKI=
+github.com/0magnet/websh v0.0.0-20260904213706-40a9dcd10c23 h1:bb0WJN/YKQD4Hp1EyAWjGW6vKlGarrUEpTvmd9/fOBE=
+github.com/0magnet/websh v0.0.0-20260904213706-40a9dcd10c23/go.mod h1:zM6emVi15GzCgqt30dRv3cWxBVgt3A+W7Fwx3GZPcKI=
 github.com/0magnet/winbox-go v0.0.0-20260903022448-a6277067b114 h1:GXEB4uKGtZWAdYE/vXtgpPiLr6nL6huiiLJRmD0jC5k=
 github.com/0magnet/winbox-go v0.0.0-20260903022448-a6277067b114/go.mod h1:19+/rRQWd/tc9/8CFcUr6C+3AipeZmHyyda2tVombe4=
 github.com/0magnet/xterm-go v0.0.0-20260903022452-f823b747bcfe h1:gE0jlMzzlZio5Rakb0HJzHosodgpgv+EaCk7hDw2ve4=
