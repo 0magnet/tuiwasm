@@ -36,7 +36,7 @@ func RegisterDemoApplets() {
 
 func runDemo(ctx context.Context, s *shell.Shell, hc *interp.HandlerContext, d demos.Demo) int {
 	// A text demo writes and stops. It needs no screen, no keys and no
-	// teardown — it is an ordinary command that happens to print in colour.
+	// teardown — it is an ordinary command that happens to print in color.
 	if d.Text != nil {
 		cols, rows := 80, 24
 		if s.Size != nil {

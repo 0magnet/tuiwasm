@@ -157,7 +157,7 @@ be a title bar.
 **The tcell windows take turns.** tcell's wasm screen reaches the page through
 global function names and installs its own `onKeyEvent` among them, so a second
 screen's `Init` overwrites the first's and the keyboard would follow whichever
-initialised last. What makes several windows workable is that tcell already
+initialized last. What makes several windows workable is that tcell already
 knows how to step aside: `Suspend` unsets its `onKeyEvent`, `Resume` puts it
 back. Clicking a window calls `Claim`, which suspends whoever held the globals
 and resumes this one. A suspended screen gets no events, blocks in `PollEvent`

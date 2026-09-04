@@ -115,7 +115,7 @@ type Screen struct {
 
 	// The last styling written, so a run of cells that share it says it once.
 	// It is most of the bytes — a cell is about ten of position and thirty-odd
-	// of colour — and neighbouring cells nearly always share a style.
+	// of color — and neighbouring cells nearly always share a style.
 	//
 	// The inputs are compared rather than the rendered sequence, so an
 	// unchanged style costs nothing at all.
@@ -493,7 +493,7 @@ func (s *Screen) flushLocked() {
 	s.buf = s.buf[:0]
 }
 
-// colorHex renders a tcell colour as 0xRRGGBB, or -1 for "whatever the
+// colorHex renders a tcell color as 0xRRGGBB, or -1 for "whatever the
 // terminal's default is", which the sequence builders substitute for.
 func colorHex(c tcell.Color) int {
 	if !c.Valid() {
