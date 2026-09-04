@@ -8,9 +8,11 @@ require (
 	github.com/0magnet/desk v0.0.0-20260903023351-72618068a49a
 	github.com/0magnet/desk/panes v0.0.0-20260828165122-3c2724676aec
 	github.com/0magnet/glamour v1.0.1-0.20260828223301-bc6921785a82
+	github.com/0magnet/lolcat-go v0.0.0-20260904184109-f89ebf69cd6d
 	github.com/0magnet/proxima5 v0.0.0-20260828143304-69dc438364d2
 	github.com/0magnet/proxima5/v2 v2.0.0-20260902091202-e45c029b343b
 	github.com/0magnet/termanim v0.0.0-20260903022407-3c9a5cc9ee76
+	github.com/0magnet/toilet-go v0.0.0-20260904203637-742aae55506f
 	github.com/0magnet/xterm-go v0.0.0-20260903022452-f823b747bcfe
 	github.com/charmbracelet/lipgloss v1.1.1-0.20250404203927-76690c660834
 	github.com/gdamore/tcell/v2 v2.13.10
@@ -23,10 +25,12 @@ require (
 
 require (
 	charm.land/lipgloss/v2 v2.0.4 // indirect
+	github.com/0magnet/img2txt-go v0.0.0-20260904194350-65b7f4ca789e // indirect
 	github.com/charmbracelet/ultraviolet v0.0.0-20251205161215-1948445e3318 // indirect
 	github.com/charmbracelet/x/termios v0.1.1 // indirect
 	github.com/charmbracelet/x/windows v0.2.2 // indirect
 	github.com/muesli/cancelreader v0.2.2 // indirect
+	golang.org/x/image v0.45.0 // indirect
 	golang.org/x/sync v0.22.0 // indirect
 )
 
@@ -35,9 +39,9 @@ require (
 	atomicgo.dev/keyboard v0.2.10 // indirect
 	atomicgo.dev/schedule v0.1.0 // indirect
 	github.com/0magnet/afero v1.15.1-0.20260816202415-9f9d46a34dcd // indirect
-	github.com/0magnet/sh/v3 v3.13.2-0.20260818190530-13d0024da85c // indirect
+	github.com/0magnet/sh/v3 v3.13.2-0.20260818190530-13d0024da85c
 	github.com/0magnet/u-root v0.16.1-0.20260814161052-156e0b67262b // indirect
-	github.com/0magnet/websh v0.0.0-20260903023334-1f972db1b545 // indirect
+	github.com/0magnet/websh v0.0.0-20260903023334-1f972db1b545
 	github.com/0magnet/winbox-go v0.0.0-20260903022448-a6277067b114 // indirect
 	github.com/alecthomas/chroma/v2 v2.27.0 // indirect
 	github.com/aymanbagabas/go-osc52/v2 v2.0.1 // indirect

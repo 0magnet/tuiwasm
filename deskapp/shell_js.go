@@ -20,9 +20,14 @@ import (
 const shellGreeting = "" +
 	"\x1b[1;36mwebsh\x1b[0m — a shell, in the same terminal the demos draw into\r\n" +
 	"\x1b[2mthe demos in the launcher are output; this one takes input\x1b[0m\r\n\r\n" +
-	"try: \x1b[1mls /\x1b[0m · \x1b[1mecho hi > note.txt && cat note.txt\x1b[0m · \x1b[1mhelp\x1b[0m\r\n\r\n"
+	"try: \x1b[1mls /\x1b[0m · \x1b[1mecho hi > note.txt && cat note.txt\x1b[0m · \x1b[1mhelp\x1b[0m\r\n" +
+	"     \x1b[1mtoilet -f smblock hello | lolcat\x1b[0m\r\n\r\n"
 
 func RegisterShell() {
+	// toilet and lolcat are ports that live in their own repositories; a
+	// pipeline joining them belongs in a shell rather than in either of them.
+	RegisterApplets()
+
 	desk.Register(desk.App{
 		Name:   "shell",
 		Title:  "shell",
