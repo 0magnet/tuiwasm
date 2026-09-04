@@ -4,8 +4,10 @@ Go terminal-UI libraries running in the browser, on top of
 [xterm-go](https://github.com/0magnet/xterm-go).
 
 **[Live demo](https://0magnet.github.io/tuiwasm/)** (standard Go build) ·
-[TinyGo build](https://0magnet.github.io/tuiwasm/tinygo/) — smaller; see
+**[TinyGo build](https://0magnet.github.io/tuiwasm/tinygo/)** — smaller; see
 Building and serving below.
+
+![tuiwasm in the browser](docs/tuiwasm-demo.png "four libraries in four windows: a websh shell, lipgloss styles, a table, and truecolor boxes")
 
 The libraries are other people's; what is here is the small amount of glue each
 one needs to work in a browser, and demos that show it working. Nothing in
