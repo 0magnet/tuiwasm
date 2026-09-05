@@ -179,7 +179,7 @@ func TestSyncClearsSoBlankCellsComeBack(t *testing.T) {
 }
 
 // A run of cells sharing a style should say it once. That is most of the bytes
-// in a frame, and neighbouring cells nearly always share a style.
+// in a frame, and neighboring cells nearly always share a style.
 func TestRepeatedStyleIsWrittenOnce(t *testing.T) {
 	s, ft := newTestScreen(t, 80, 24)
 	st := tcell.StyleDefault.
@@ -503,7 +503,7 @@ func newDirectScreen(t *testing.T, cols, rows int) (*Screen, *sinkTerm) {
 		t.Fatal(err)
 	}
 	if s.sink == nil {
-		t.Fatal("a terminal that takes cells directly was not recognised")
+		t.Fatal("a terminal that takes cells directly was not recognized")
 	}
 	return s, kt
 }

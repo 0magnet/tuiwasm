@@ -27,7 +27,7 @@ import (
 // screenshot.
 func RegisterApplets() {
 	shell.RegisterApplet("toilet", "big text — a port of TOIlet (try: toilet -f smblock hi)", runToilet)
-	shell.RegisterApplet("lolcat", "rainbow-colour stdin — a port of lolcat", runLolcat)
+	shell.RegisterApplet("lolcat", "rainbow-color stdin — a port of lolcat", runLolcat)
 }
 
 func runToilet(_ context.Context, _ *shell.Shell, hc *interp.HandlerContext, args []string) int {
@@ -64,7 +64,7 @@ func runToilet(_ context.Context, _ *shell.Shell, hc *interp.HandlerContext, arg
 		case "--fonts":
 			return listFonts(hc)
 		default:
-			// An unrecognised flag is refused rather than rendered. Silently
+			// An unrecognized flag is refused rather than rendered. Silently
 			// treating -X as text would print it in big letters and look like
 			// the flag had worked.
 			if len(a) > 1 && a[0] == '-' {
@@ -105,14 +105,14 @@ func runLolcat(_ context.Context, _ *shell.Shell, hc *interp.HandlerContext, arg
 		default:
 			// -a/--animate in particular: it never returns, and an applet that
 			// never returns holds the terminal until Ctrl+C. Refusing beats
-			// accepting a flag and not honouring it.
+			// accepting a flag and not honoring it.
 			if len(a) > 1 && a[0] == '-' {
 				return unknownFlag(hc, "lolcat", a)
 			}
 		}
 	}
 
-	// The terminal is truecolour, so say so rather than sniffing an
+	// The terminal is truecolor, so say so rather than sniffing an
 	// environment variable a browser has no reason to set.
 	c := &lol.Cat{Opts: opts, Out: hc.Stdout, TTY: true}
 	c.SetMode("truecolor")

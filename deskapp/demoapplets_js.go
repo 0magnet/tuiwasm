@@ -70,7 +70,7 @@ func runDemo(ctx context.Context, s *shell.Shell, hc *interp.HandlerContext, d d
 		return 1
 	}
 
-	// Ctrl+C reaches here as a cancelled context: websh's session watches the
+	// Ctrl+C reaches here as a canceled context: websh's session watches the
 	// raw input for it and cancels whatever is running. That is the whole of
 	// the "back to the shell" story — the demo stops, the screen is handed
 	// back, and the prompt returns.
