@@ -488,11 +488,16 @@ func newSinkTerm(cols, rows int) *sinkTerm {
 	}
 }
 
-func (k *sinkTerm) putCell(x, y int, str string, fg, bg uint32, width int) {
+// putCell mirrors the terminal interface, so the unused parameters stay in
+// the signature and are named _ rather than dropped.
+func (k *sinkTerm) putCell(x, y int, str string, _, _ uint32, _ int) {
 	k.cells[[2]int{x, y}] = str
 }
 func (k *sinkTerm) refresh(y1, y2 int) { k.refreshs = append(k.refreshs, [2]int{y1, y2}) }
 
+// parameter because the helper is about building a screen of a given size.
+//
+//nolint:unparam // cols is fixed at 20 across today's callers; it stays a
 func newDirectScreen(t *testing.T, cols, rows int) (*Screen, *sinkTerm) {
 	t.Helper()
 	current = nil

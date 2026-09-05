@@ -127,7 +127,10 @@ func runScreen(d demos.Demo) (err error) {
 // runText writes the demo to stdout, fitted to the terminal.
 func runText(d demos.Demo) error {
 	cols, rows := 80, 24
-	if w, h, err := term.GetSize(int(os.Stdout.Fd())); err == nil && w > 0 {
+	// Under js/wasm GetSize can never succeed, so the linter reads err == nil
+	// as dead there. This command is for a real terminal, where it is the
+	// whole point; 80x24 is the fallback when there is no size to ask for.
+	if w, h, err := term.GetSize(int(os.Stdout.Fd())); err == nil && w > 0 { //nolint:staticcheck
 		cols, rows = w, h
 	}
 	return d.Text(os.Stdout, cols, rows)
