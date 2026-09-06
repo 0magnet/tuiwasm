@@ -5,8 +5,8 @@ go 1.26.5
 require (
 	github.com/0magnet/calvin v0.0.0-20260904172612-288ced851c19
 	github.com/0magnet/coloredcobra v1.0.2
-	github.com/0magnet/desk v0.0.0-20260903023351-72618068a49a
-	github.com/0magnet/desk/panes v0.0.0-20260828165122-3c2724676aec
+	github.com/0magnet/desk v0.0.0-20260905222602-fb59fd5ceea5
+	github.com/0magnet/desk/panes v0.0.0-20260905222602-fb59fd5ceea5
 	github.com/0magnet/glamour v1.0.1-0.20260828223301-bc6921785a82
 	github.com/0magnet/lolcat-go v0.0.0-20260904184109-f89ebf69cd6d
 	github.com/0magnet/proxima5 v0.0.0-20260828143304-69dc438364d2
@@ -42,7 +42,7 @@ require (
 	github.com/0magnet/sh/v3 v3.13.2-0.20260818190530-13d0024da85c
 	github.com/0magnet/u-root v0.16.1-0.20260814161052-156e0b67262b // indirect
 	github.com/0magnet/websh v0.0.0-20260904213706-40a9dcd10c23
-	github.com/0magnet/winbox-go v0.0.0-20260903022448-a6277067b114 // indirect
+	github.com/0magnet/winbox-go v0.0.0-20260905000411-6eefa77dea85 // indirect
 	github.com/alecthomas/chroma/v2 v2.27.0 // indirect
 	github.com/aymanbagabas/go-osc52/v2 v2.0.1 // indirect
 	github.com/benhoyt/goawk v1.31.0 // indirect

@@ -14,10 +14,10 @@ github.com/0magnet/calvin v0.0.0-20260904172612-288ced851c19 h1:7z94h/iwePTDazkN
 github.com/0magnet/calvin v0.0.0-20260904172612-288ced851c19/go.mod h1:SrNaZcBbV8Ro28LlUQZak8rAtayeyQ0Snm2VJ3ryAXY=
 github.com/0magnet/coloredcobra v1.0.2 h1:HmKUcBcpBpbdPv03XyIfH8iMOIG2TDQIkx3GLWGbtf4=
 github.com/0magnet/coloredcobra v1.0.2/go.mod h1:LuB8WMJUz/OsbiFXZnUEtHnpt112tBTZiUTiuAotXoY=
-github.com/0magnet/desk v0.0.0-20260903023351-72618068a49a h1:mfZmJK40fxCbGmSLgj3tq5EeBu3oVfiT7OF+lXWT+1A=
-github.com/0magnet/desk v0.0.0-20260903023351-72618068a49a/go.mod h1:+cZlrl5Xi6wnQB9M7EgUOu/8oWs2Y9zIQ8FO0YjG6Wg=
-github.com/0magnet/desk/panes v0.0.0-20260828165122-3c2724676aec h1:ODD0bJ8A6F154xnCRqfgY2w4vjU/UZPXR8sgKZbPA84=
-github.com/0magnet/desk/panes v0.0.0-20260828165122-3c2724676aec/go.mod h1:z/ML2hEd//x/SznagiS5+g3NskrU49QYO2zpkO3Y3p8=
+github.com/0magnet/desk v0.0.0-20260905222602-fb59fd5ceea5 h1:VUJ9oBu6ojtp2d6an2Qgw6w2RykCt6IBCW3YBCzHNus=
+github.com/0magnet/desk v0.0.0-20260905222602-fb59fd5ceea5/go.mod h1:9VSe+GQN9638OmSPr8J84CgTMinZ6qNj4Xj6aNCfKlU=
+github.com/0magnet/desk/panes v0.0.0-20260905222602-fb59fd5ceea5 h1:+HvArONQgExwYgQ1fKNJkjTHi333667cxjfrSlTHrMg=
+github.com/0magnet/desk/panes v0.0.0-20260905222602-fb59fd5ceea5/go.mod h1:z/ML2hEd//x/SznagiS5+g3NskrU49QYO2zpkO3Y3p8=
 github.com/0magnet/glamour v1.0.1-0.20260828223301-bc6921785a82 h1:41cGxquyYGH+jNJIWJhIAWqF/ck1bqGsQnd4IE8iBLQ=
 github.com/0magnet/glamour v1.0.1-0.20260828223301-bc6921785a82/go.mod h1:vN1tpO8XCvigIAlDE3GJHWjbwHobEPYt0Mybrs44xQE=
 github.com/0magnet/img2txt-go v0.0.0-20260904194350-65b7f4ca789e h1:+yLui1TBz6v0aS4Mjp8smm6wAQpV4vMMM2YQeWKieIQ=
@@ -38,8 +38,8 @@ github.com/0magnet/u-root v0.16.1-0.20260814161052-156e0b67262b h1:1p4E2ok/rmNJU
 github.com/0magnet/u-root v0.16.1-0.20260814161052-156e0b67262b/go.mod h1:fId14v+rNp1A0ZKHJPZZyiu9dfgWKEs7nbyvKrku3bo=
 github.com/0magnet/websh v0.0.0-20260904213706-40a9dcd10c23 h1:bb0WJN/YKQD4Hp1EyAWjGW6vKlGarrUEpTvmd9/fOBE=
 github.com/0magnet/websh v0.0.0-20260904213706-40a9dcd10c23/go.mod h1:zM6emVi15GzCgqt30dRv3cWxBVgt3A+W7Fwx3GZPcKI=
-github.com/0magnet/winbox-go v0.0.0-20260903022448-a6277067b114 h1:GXEB4uKGtZWAdYE/vXtgpPiLr6nL6huiiLJRmD0jC5k=
-github.com/0magnet/winbox-go v0.0.0-20260903022448-a6277067b114/go.mod h1:19+/rRQWd/tc9/8CFcUr6C+3AipeZmHyyda2tVombe4=
+github.com/0magnet/winbox-go v0.0.0-20260905000411-6eefa77dea85 h1:Nkm7o00p0QBtNqrXLWirwVUm7apvpfOeyTIB3sdMT1k=
+github.com/0magnet/winbox-go v0.0.0-20260905000411-6eefa77dea85/go.mod h1:19+/rRQWd/tc9/8CFcUr6C+3AipeZmHyyda2tVombe4=
 github.com/0magnet/xterm-go v0.0.0-20260904164423-3896621e5b7c h1:9eQ7v8AukfJikwWdGvwUwAO8EJZmRubAyp6OPoKMV1E=
 github.com/0magnet/xterm-go v0.0.0-20260904164423-3896621e5b7c/go.mod h1:W6c6ofSTsxXuQEr1rSZ3qmfOj5a3LGB3uLQBL0/TiKc=
 github.com/MarvinJWendt/testza v0.5.2 h1:53KDo64C1z/h/d/stCYCPY69bt/OSwjq5KpFNwi+zB4=
