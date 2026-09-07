@@ -3,8 +3,8 @@
 Go terminal-UI libraries running in the browser, on top of
 [xterm-go](https://github.com/0magnet/xterm-go).
 
-**[Live demo](https://0magnet.github.io/tuiwasm/)** (standard Go build) ·
-**[TinyGo build](https://0magnet.github.io/tuiwasm/tinygo/)** — smaller; see
+**[Live demo](https://tuiwasm.magnetosphere.net/)** (standard Go build) ·
+**[TinyGo build](https://tuiwasm.magnetosphere.net/tinygo/)** — smaller; see
 Building and serving below.
 
 ![tuiwasm in the browser](docs/tuiwasm-demo.png "four libraries in four windows: a websh shell, lipgloss styles, a table, and truecolor boxes")
@@ -191,7 +191,7 @@ GitHub Pages serves `application/wasm` with `content-encoding: gzip` without
 being asked, so compression needs no configuration at all:
 
 ```
-$ curl -sI -H 'accept-encoding: gzip' https://0magnet.github.io/xterm-go/main.wasm
+$ curl -sI -H 'accept-encoding: gzip' https://xterm-go.magnetosphere.net/main.wasm
 content-type: application/wasm
 content-encoding: gzip
 content-length: 302238        # 867902 uncompressed
