@@ -50,7 +50,7 @@ const (
 
 	// site is where the published page lives. Every demo is that one page and
 	// that one .wasm with a different query string; there is no per-demo build.
-	site = "https://0magnet.github.io/tuiwasm/"
+	site = "https://tuiwasm.magnetosphere.net/"
 )
 
 var (
