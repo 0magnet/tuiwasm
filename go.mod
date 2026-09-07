@@ -3,7 +3,7 @@ module github.com/0magnet/tuiwasm
 go 1.26.5
 
 require (
-	github.com/0magnet/calvin v0.0.0-20260907164811-60c88e364a88
+	github.com/0magnet/calvin v0.0.0-20260907211102-35b15c690884
 	github.com/0magnet/coloredcobra v1.0.3
 	github.com/0magnet/desk v0.0.0-20260905222602-fb59fd5ceea5
 	github.com/0magnet/desk/panes v0.0.0-20260905222602-fb59fd5ceea5

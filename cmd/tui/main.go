@@ -13,8 +13,7 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/0magnet/calvin"
-	cc "github.com/0magnet/coloredcobra"
+	"github.com/0magnet/calvin/clihelp"
 	tcell2 "github.com/gdamore/tcell/v2"
 	"github.com/gdamore/tcell/v3"
 	"github.com/spf13/cobra"
@@ -39,18 +38,15 @@ var list bool
 
 func init() {
 	RootCmd.Flags().BoolVarP(&list, "list", "l", false, "list the demos and exit")
-	var helpflag bool
-	RootCmd.SetUsageTemplate(help)
-	RootCmd.PersistentFlags().BoolVarP(&helpflag, "help", "h", false, "help for "+RootCmd.Use)
 	RootCmd.SetHelpCommand(&cobra.Command{Hidden: true})
-	RootCmd.PersistentFlags().MarkHidden("help") //nolint
+	clihelp.Init(RootCmd, "tui", true)
 }
 
 // RootCmd is the root command
 var RootCmd = &cobra.Command{
 	Use:                   "tui [demo]",
 	Short:                 "run a demo in this terminal",
-	Long:                  calvin.AsciiFont("tui") + "\nrun a demo in this terminal",
+	Long:                  "run a demo in this terminal",
 	Args:                  cobra.MaximumNArgs(1),
 	SilenceErrors:         true,
 	SilenceUsage:          true,
@@ -137,18 +133,6 @@ func runText(d demos.Demo) error {
 }
 
 func main() {
-	cc.Init(&cc.Config{
-		RootCmd:         RootCmd,
-		Headings:        cc.HiBlue + cc.Bold,
-		Commands:        cc.HiBlue + cc.Bold,
-		CmdShortDescr:   cc.HiBlue,
-		Example:         cc.HiBlue + cc.Italic,
-		ExecName:        cc.HiBlue + cc.Bold,
-		Flags:           cc.HiBlue + cc.Bold,
-		FlagsDescr:      cc.HiBlue,
-		NoExtraNewlines: true,
-		NoBottomNewline: true,
-	})
 	if err := RootCmd.Execute(); err != nil {
 		fmt.Fprintln(os.Stderr, strings.TrimSpace(err.Error()))
 		os.Exit(1)

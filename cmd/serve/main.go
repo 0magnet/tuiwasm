@@ -24,8 +24,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/0magnet/calvin"
-	cc "github.com/0magnet/coloredcobra"
+	"github.com/0magnet/calvin/clihelp"
 	"github.com/spf13/cobra"
 
 	"github.com/0magnet/tuiwasm"
@@ -41,18 +40,15 @@ func init() {
 	RootCmd.Flags().StringVarP(&addr, "addr", "a", "127.0.0.1:8780", "address to listen on")
 	RootCmd.Flags().BoolVarP(&open, "open", "o", true, "open a browser at the served page")
 	RootCmd.Flags().BoolVar(&nogzip, "no-gzip", false, "serve uncompressed, to see what the wasm costs on the wire")
-	var helpflag bool
-	RootCmd.SetUsageTemplate(help)
-	RootCmd.PersistentFlags().BoolVarP(&helpflag, "help", "h", false, "help for "+RootCmd.Use)
 	RootCmd.SetHelpCommand(&cobra.Command{Hidden: true})
-	RootCmd.PersistentFlags().MarkHidden("help") //nolint
+	clihelp.Init(RootCmd, "tuiwasm", true)
 }
 
 // RootCmd is the root command
 var RootCmd = &cobra.Command{
 	Use:                   "serve",
 	Short:                 "serve the built demo, as GitHub Pages would",
-	Long:                  calvin.AsciiFont("tuiwasm") + "\nserve the built demo, as GitHub Pages would",
+	Long:                  "serve the built demo, as GitHub Pages would",
 	SilenceErrors:         true,
 	SilenceUsage:          true,
 	DisableSuggestions:    true,
@@ -90,18 +86,6 @@ var RootCmd = &cobra.Command{
 }
 
 func main() {
-	cc.Init(&cc.Config{
-		RootCmd:         RootCmd,
-		Headings:        cc.HiBlue + cc.Bold,
-		Commands:        cc.HiBlue + cc.Bold,
-		CmdShortDescr:   cc.HiBlue,
-		Example:         cc.HiBlue + cc.Italic,
-		ExecName:        cc.HiBlue + cc.Bold,
-		Flags:           cc.HiBlue + cc.Bold,
-		FlagsDescr:      cc.HiBlue,
-		NoExtraNewlines: true,
-		NoBottomNewline: true,
-	})
 	if err := RootCmd.Execute(); err != nil {
 		log.Fatal("Failed to execute command: ", err)
 	}
