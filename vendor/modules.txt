@@ -18,11 +18,11 @@ charm.land/lipgloss/v2/table
 github.com/0magnet/afero
 github.com/0magnet/afero/internal/common
 github.com/0magnet/afero/mem
-# github.com/0magnet/calvin v0.0.0-20260904172612-288ced851c19
+# github.com/0magnet/calvin v0.0.0-20260905171945-6d046e156c9b
 ## explicit; go 1.25.0
 github.com/0magnet/calvin
-# github.com/0magnet/coloredcobra v1.0.2
-## explicit; go 1.15
+# github.com/0magnet/coloredcobra v1.0.3
+## explicit; go 1.25.0
 github.com/0magnet/coloredcobra
 # github.com/0magnet/desk v0.0.0-20260905222602-fb59fd5ceea5
 ## explicit; go 1.26
@@ -63,7 +63,7 @@ github.com/0magnet/sh/v3/internal
 github.com/0magnet/sh/v3/interp
 github.com/0magnet/sh/v3/pattern
 github.com/0magnet/sh/v3/syntax
-# github.com/0magnet/termanim v0.0.0-20260905010830-f8788bcdc347
+# github.com/0magnet/termanim v0.0.0-20260905171704-496bb97da414
 ## explicit; go 1.25.0
 github.com/0magnet/termanim/aquarium
 github.com/0magnet/termanim/boids
@@ -104,7 +104,7 @@ github.com/0magnet/websh/web
 # github.com/0magnet/winbox-go v0.0.0-20260905000411-6eefa77dea85
 ## explicit; go 1.24
 github.com/0magnet/winbox-go
-# github.com/0magnet/xterm-go v0.0.0-20260904164423-3896621e5b7c
+# github.com/0magnet/xterm-go v0.0.0-20260905172047-f0008e1479ee
 ## explicit; go 1.24
 github.com/0magnet/xterm-go
 github.com/0magnet/xterm-go/vt
@@ -134,7 +134,7 @@ github.com/charmbracelet/colorprofile
 # github.com/charmbracelet/lipgloss v1.1.1-0.20250404203927-76690c660834
 ## explicit; go 1.18
 github.com/charmbracelet/lipgloss
-# github.com/charmbracelet/ultraviolet v0.0.0-20260903151058-ae99b731b8c5
+# github.com/charmbracelet/ultraviolet v0.0.0-20260906173415-0277a179edd9
 ## explicit; go 1.25.0
 github.com/charmbracelet/ultraviolet
 # github.com/charmbracelet/x/ansi v0.11.8
@@ -145,7 +145,7 @@ github.com/charmbracelet/x/ansi/parser
 # github.com/charmbracelet/x/cellbuf v0.0.15
 ## explicit; go 1.24.2
 github.com/charmbracelet/x/cellbuf
-# github.com/charmbracelet/x/exp/slice v0.0.0-20260902165432-6f6ad8b37b0a
+# github.com/charmbracelet/x/exp/slice v0.0.0-20260906004030-3986e9119cf9
 ## explicit; go 1.24.0
 github.com/charmbracelet/x/exp/slice
 # github.com/charmbracelet/x/term v0.2.2
