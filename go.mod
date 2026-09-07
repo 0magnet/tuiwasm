@@ -3,7 +3,7 @@ module github.com/0magnet/tuiwasm
 go 1.26.5
 
 require (
-	github.com/0magnet/calvin v0.0.0-20260905171945-6d046e156c9b
+	github.com/0magnet/calvin v0.0.0-20260907164811-60c88e364a88
 	github.com/0magnet/coloredcobra v1.0.3
 	github.com/0magnet/desk v0.0.0-20260905222602-fb59fd5ceea5
 	github.com/0magnet/desk/panes v0.0.0-20260905222602-fb59fd5ceea5
@@ -11,9 +11,9 @@ require (
 	github.com/0magnet/lolcat-go v0.0.0-20260904184109-f89ebf69cd6d
 	github.com/0magnet/proxima5 v0.0.0-20260828143304-69dc438364d2
 	github.com/0magnet/proxima5/v2 v2.0.0-20260902091202-e45c029b343b
-	github.com/0magnet/termanim v0.0.0-20260905171704-496bb97da414
+	github.com/0magnet/termanim v0.0.0-20260907160035-43b5e3d1c5a0
 	github.com/0magnet/toilet-go v0.0.0-20260904203637-742aae55506f
-	github.com/0magnet/xterm-go v0.0.0-20260905172047-f0008e1479ee
+	github.com/0magnet/xterm-go v0.0.0-20260907164817-c5d24e1daacc
 	github.com/charmbracelet/lipgloss v1.1.1-0.20250404203927-76690c660834
 	github.com/gdamore/tcell/v2 v2.13.10
 	github.com/guptarohit/asciigraph v0.10.0
