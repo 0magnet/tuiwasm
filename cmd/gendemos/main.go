@@ -34,7 +34,6 @@ import (
 	// eventually draw into is js/wasm.
 	_ "github.com/0magnet/tuiwasm/demos/anim"
 	_ "github.com/0magnet/tuiwasm/demos/charts"
-	_ "github.com/0magnet/tuiwasm/demos/markdown"
 	_ "github.com/0magnet/tuiwasm/demos/proxima"
 	_ "github.com/0magnet/tuiwasm/demos/proxima2"
 	_ "github.com/0magnet/tuiwasm/demos/styles"

@@ -96,7 +96,11 @@ at startup — so a link to one costs nothing to serve and there is no per-demo
 build. The full-page view has no chrome at all: it should look like the terminal
 it would run in, and the browser already has a back button.
 
-`pterm` is not listed: it needs `-tags pterm`, see `shims/`.
+`pterm` is not listed: it needs `-tags pterm`, see `shims/`. Neither is
+`markdown`, which needs `-tags tuimarkdown` — glamour and chroma are a couple
+of megabytes for one demo. Build gendemos with the same tags as the binary and
+both appear; the table describes the build it was generated from, never a
+build nobody ships.
 
 <!-- BEGIN DEMOS -->
 | demo | shape | what it is |
@@ -121,7 +125,6 @@ it would run in, and the browser already has a back button.
 | [`lavalamp`](https://tuiwasm.magnetosphere.net/?demo=lavalamp) | screen | wax that heats, rises, cools and sinks |
 | [`life`](https://tuiwasm.magnetosphere.net/?demo=life) | screen | Conway's life, colored by how long a cell has lived |
 | [`lightning`](https://tuiwasm.magnetosphere.net/?demo=lightning) | screen | a branching discharge: leader, return stroke, afterglow |
-| [`markdown`](https://tuiwasm.magnetosphere.net/?demo=markdown) | text | glamour + chroma — rendered markdown, highlighted code |
 | [`matrix`](https://tuiwasm.magnetosphere.net/?demo=matrix) | screen | falling columns of glyphs |
 | [`maze`](https://tuiwasm.magnetosphere.net/?demo=maze) | screen | a maze carved by backtracking, then solved |
 | [`metaballs`](https://tuiwasm.magnetosphere.net/?demo=metaballs) | screen | blobs that bulge and merge as they approach |
