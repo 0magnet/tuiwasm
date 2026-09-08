@@ -9,6 +9,13 @@ Building and serving below.
 
 ![tuiwasm in the browser](docs/tuiwasm-demo.png "four libraries in four windows: a websh shell, lipgloss styles, a table, and truecolor boxes")
 
+![All forty-three demos](docs/tuiwasm-gallery.png "every demo the launcher offers, one frame each, captured from the browser build")
+
+Forty-three demos, every one of them a frame captured from the running browser
+build: thirty-four animations from
+[termanim](https://github.com/0magnet/termanim), tcell's own demos, and the
+tview, lipgloss and pterm ones written here.
+
 The libraries are other people's; what is here is the small amount of glue each
 one needs to work in a browser, and demos that show it working. Nothing in
 [websh](https://github.com/0magnet/websh) or

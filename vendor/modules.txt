@@ -114,7 +114,7 @@ github.com/0magnet/websh/web
 # github.com/0magnet/winbox-go v0.0.0-20260908011106-113d480c4188
 ## explicit; go 1.24
 github.com/0magnet/winbox-go
-# github.com/0magnet/xterm-go v0.0.0-20260908011048-6bbc23473554
+# github.com/0magnet/xterm-go v0.0.0-20260908200322-79e29f0f6b91
 ## explicit; go 1.24
 github.com/0magnet/xterm-go
 github.com/0magnet/xterm-go/vt
