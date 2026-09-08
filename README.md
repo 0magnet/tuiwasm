@@ -102,8 +102,10 @@ it would run in, and the browser already has a back button.
 | demo | shape | what it is |
 | --- | --- | --- |
 | [`aquarium`](https://tuiwasm.magnetosphere.net/?demo=aquarium) | screen | fish swimming past swaying seaweed |
+| [`aurora`](https://tuiwasm.magnetosphere.net/?demo=aurora) | screen | curtains of light, folding, with the creases where they turn |
 | [`boids`](https://tuiwasm.magnetosphere.net/?demo=boids) | screen | flocking by separation, alignment and cohesion |
 | [`bonsai`](https://tuiwasm.magnetosphere.net/?demo=bonsai) | screen | a bonsai tree growing branch by branch |
+| [`bounce`](https://tuiwasm.magnetosphere.net/?demo=bounce) | screen | the screensaver logo, and the wait for it to hit a corner |
 | [`boxes`](https://tuiwasm.magnetosphere.net/?demo=boxes) | screen | tcell's own boxes demo — random boxes, timed |
 | [`charts`](https://tuiwasm.magnetosphere.net/?demo=charts) | text | asciigraph — a line plot in cells |
 | [`clock`](https://tuiwasm.magnetosphere.net/?demo=clock) | screen | an analog clock, after aclock |
@@ -112,19 +114,28 @@ it would run in, and the browser already has a back button.
 | [`donut`](https://tuiwasm.magnetosphere.net/?demo=donut) | screen | a lit torus with a z-buffer |
 | [`fire`](https://tuiwasm.magnetosphere.net/?demo=fire) | screen | a heat grid seeded with noise and cooled upward |
 | [`fireworks`](https://tuiwasm.magnetosphere.net/?demo=fireworks) | screen | shells that rise, burst and droop into willows |
+| [`flow`](https://tuiwasm.magnetosphere.net/?demo=flow) | screen | particles carried through a divergence-free curl-noise field |
+| [`frost`](https://tuiwasm.magnetosphere.net/?demo=frost) | screen | a crystal growing by diffusion-limited aggregation |
+| [`julia`](https://tuiwasm.magnetosphere.net/?demo=julia) | screen | a Julia set morphing as its parameter walks the cardioid |
 | [`langton`](https://tuiwasm.magnetosphere.net/?demo=langton) | screen | Langton's ants: chaos, then the highway |
 | [`lavalamp`](https://tuiwasm.magnetosphere.net/?demo=lavalamp) | screen | wax that heats, rises, cools and sinks |
 | [`life`](https://tuiwasm.magnetosphere.net/?demo=life) | screen | Conway's life, colored by how long a cell has lived |
+| [`lightning`](https://tuiwasm.magnetosphere.net/?demo=lightning) | screen | a branching discharge: leader, return stroke, afterglow |
 | [`markdown`](https://tuiwasm.magnetosphere.net/?demo=markdown) | text | glamour + chroma — rendered markdown, highlighted code |
 | [`matrix`](https://tuiwasm.magnetosphere.net/?demo=matrix) | screen | falling columns of glyphs |
 | [`maze`](https://tuiwasm.magnetosphere.net/?demo=maze) | screen | a maze carved by backtracking, then solved |
 | [`metaballs`](https://tuiwasm.magnetosphere.net/?demo=metaballs) | screen | blobs that bulge and merge as they approach |
 | [`moire`](https://tuiwasm.magnetosphere.net/?demo=moire) | screen | two drifting ripples interfering |
+| [`parrot`](https://tuiwasm.magnetosphere.net/?demo=parrot) | screen | the party parrot, rolling once around the hue wheel |
+| [`pendulum`](https://tuiwasm.magnetosphere.net/?demo=pendulum) | screen | double pendulums released together, shearing apart |
+| [`physarum`](https://tuiwasm.magnetosphere.net/?demo=physarum) | screen | slime mold laying trails and building a transport network |
 | [`pipes`](https://tuiwasm.magnetosphere.net/?demo=pipes) | screen | pipes growing and turning, with correct elbows |
 | [`plasma`](https://tuiwasm.magnetosphere.net/?demo=plasma) | screen | summed sine waves of position, offset by time |
 | [`proxima`](https://tuiwasm.magnetosphere.net/?demo=proxima) | screen | Escape from Proxima 5 — gdamore's tcell space shooter |
 | [`proxima2`](https://tuiwasm.magnetosphere.net/?demo=proxima2) | screen | Escape from Proxima 5 on tcell v2 — the same game, one major back |
 | [`rain`](https://tuiwasm.magnetosphere.net/?demo=rain) | screen | drops with depth, slant, streaks and splashes |
+| [`reaction`](https://tuiwasm.magnetosphere.net/?demo=reaction) | screen | Gray-Scott reaction-diffusion: spots that divide into a labyrinth |
+| [`ripple`](https://tuiwasm.magnetosphere.net/?demo=ripple) | screen | a ripple tank: rain falling, rings meeting and interfering |
 | [`sand`](https://tuiwasm.magnetosphere.net/?demo=sand) | screen | grains heaping at their angle of repose |
 | [`snow`](https://tuiwasm.magnetosphere.net/?demo=snow) | screen | flakes that sway, settle and drift into banks |
 | [`starfield`](https://tuiwasm.magnetosphere.net/?demo=starfield) | screen | stars streaming past the viewer |
@@ -132,6 +143,7 @@ it would run in, and the browser already has a back button.
 | [`tables`](https://tuiwasm.magnetosphere.net/?demo=tables) | text | go-pretty — the wasm compatibility matrix |
 | [`tunnel`](https://tuiwasm.magnetosphere.net/?demo=tunnel) | screen | flying down a textured tube |
 | [`unicode`](https://tuiwasm.magnetosphere.net/?demo=unicode) | screen | tcell's own unicode demo — wide, combining and emoji glyphs |
+| [`wolfram`](https://tuiwasm.magnetosphere.net/?demo=wolfram) | screen | elementary cellular automata scrolling upward - 30, 90, 110 |
 <!-- END DEMOS -->
 
 The table is generated from the registry by `go run ./cmd/gendemos`; a list of

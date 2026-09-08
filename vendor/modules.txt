@@ -22,9 +22,6 @@ github.com/0magnet/afero/mem
 ## explicit; go 1.25.0
 github.com/0magnet/calvin
 github.com/0magnet/calvin/clihelp
-# github.com/0magnet/coloredcobra v1.0.3
-## explicit; go 1.25.0
-github.com/0magnet/coloredcobra
 # github.com/0magnet/desk v0.0.0-20260905222602-fb59fd5ceea5
 ## explicit; go 1.26
 github.com/0magnet/desk
@@ -64,31 +61,43 @@ github.com/0magnet/sh/v3/internal
 github.com/0magnet/sh/v3/interp
 github.com/0magnet/sh/v3/pattern
 github.com/0magnet/sh/v3/syntax
-# github.com/0magnet/termanim v0.0.0-20260907160035-43b5e3d1c5a0
+# github.com/0magnet/termanim v0.0.0-20260908023616-c8ef5f994644
 ## explicit; go 1.25.0
 github.com/0magnet/termanim/aquarium
+github.com/0magnet/termanim/aurora
 github.com/0magnet/termanim/boids
 github.com/0magnet/termanim/bonsai
+github.com/0magnet/termanim/bounce
 github.com/0magnet/termanim/canvas
 github.com/0magnet/termanim/clock
 github.com/0magnet/termanim/cube
 github.com/0magnet/termanim/donut
 github.com/0magnet/termanim/fire
 github.com/0magnet/termanim/fireworks
+github.com/0magnet/termanim/flow
+github.com/0magnet/termanim/frost
+github.com/0magnet/termanim/julia
 github.com/0magnet/termanim/langton
 github.com/0magnet/termanim/lavalamp
 github.com/0magnet/termanim/life
+github.com/0magnet/termanim/lightning
 github.com/0magnet/termanim/matrix
 github.com/0magnet/termanim/maze
 github.com/0magnet/termanim/metaballs
 github.com/0magnet/termanim/moire
+github.com/0magnet/termanim/parrot
+github.com/0magnet/termanim/pendulum
+github.com/0magnet/termanim/physarum
 github.com/0magnet/termanim/pipes
 github.com/0magnet/termanim/plasma
 github.com/0magnet/termanim/rain
+github.com/0magnet/termanim/reaction
+github.com/0magnet/termanim/ripple
 github.com/0magnet/termanim/sand
 github.com/0magnet/termanim/snow
 github.com/0magnet/termanim/starfield
 github.com/0magnet/termanim/tunnel
+github.com/0magnet/termanim/wolfram
 # github.com/0magnet/toilet-go v0.0.0-20260904203637-742aae55506f
 ## explicit; go 1.25.0
 github.com/0magnet/toilet-go/canvas
@@ -175,9 +184,6 @@ github.com/dlclark/regexp2/v2/syntax
 # github.com/dustin/go-humanize v1.0.1
 ## explicit; go 1.16
 github.com/dustin/go-humanize
-# github.com/fatih/color v1.19.0
-## explicit; go 1.25.0
-github.com/fatih/color
 # github.com/gdamore/encoding v1.0.1
 ## explicit; go 1.9
 github.com/gdamore/encoding
@@ -249,9 +255,6 @@ github.com/lithammer/fuzzysearch/fuzzy
 # github.com/lucasb-eyer/go-colorful v1.4.1
 ## explicit; go 1.12
 github.com/lucasb-eyer/go-colorful
-# github.com/mattn/go-colorable v0.1.15
-## explicit; go 1.18
-github.com/mattn/go-colorable
 # github.com/mattn/go-isatty v0.0.24
 ## explicit; go 1.20
 github.com/mattn/go-isatty

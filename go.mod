@@ -4,14 +4,13 @@ go 1.26.5
 
 require (
 	github.com/0magnet/calvin v0.0.0-20260907211102-35b15c690884
-	github.com/0magnet/coloredcobra v1.0.3
 	github.com/0magnet/desk v0.0.0-20260905222602-fb59fd5ceea5
 	github.com/0magnet/desk/panes v0.0.0-20260905222602-fb59fd5ceea5
 	github.com/0magnet/glamour v1.0.1-0.20260828223301-bc6921785a82
 	github.com/0magnet/lolcat-go v0.0.0-20260904184109-f89ebf69cd6d
 	github.com/0magnet/proxima5 v0.0.0-20260828143304-69dc438364d2
 	github.com/0magnet/proxima5/v2 v2.0.0-20260902091202-e45c029b343b
-	github.com/0magnet/termanim v0.0.0-20260907160035-43b5e3d1c5a0
+	github.com/0magnet/termanim v0.0.0-20260908023616-c8ef5f994644
 	github.com/0magnet/toilet-go v0.0.0-20260904203637-742aae55506f
 	github.com/0magnet/xterm-go v0.0.0-20260907164817-c5d24e1daacc
 	github.com/charmbracelet/lipgloss v1.1.1-0.20250404203927-76690c660834
@@ -56,7 +55,6 @@ require (
 	github.com/containerd/console v1.0.5 // indirect
 	github.com/dlclark/regexp2/v2 v2.7.2 // indirect
 	github.com/dustin/go-humanize v1.0.1 // indirect
-	github.com/fatih/color v1.19.0 // indirect
 	github.com/gdamore/encoding v1.0.1 // indirect
 	github.com/gdamore/tcell/v3 v3.4.2
 	github.com/gookit/color v1.6.1 // indirect
@@ -65,7 +63,6 @@ require (
 	github.com/itchyny/timefmt-go v0.1.8 // indirect
 	github.com/lithammer/fuzzysearch v1.1.8 // indirect
 	github.com/lucasb-eyer/go-colorful v1.4.1 // indirect
-	github.com/mattn/go-colorable v0.1.15 // indirect
 	github.com/mattn/go-isatty v0.0.24 // indirect
 	github.com/mattn/go-runewidth v0.0.29 // indirect
 	github.com/muesli/termenv v0.16.0 // indirect
