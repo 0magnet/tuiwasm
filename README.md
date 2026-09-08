@@ -146,6 +146,7 @@ build nobody ships.
 | [`tables`](https://tuiwasm.magnetosphere.net/?demo=tables) | text | go-pretty — the wasm compatibility matrix |
 | [`tunnel`](https://tuiwasm.magnetosphere.net/?demo=tunnel) | screen | flying down a textured tube |
 | [`unicode`](https://tuiwasm.magnetosphere.net/?demo=unicode) | screen | tcell's own unicode demo — wide, combining and emoji glyphs |
+| [`widgets`](https://tuiwasm.magnetosphere.net/?demo=widgets) | screen | tview — a flexbox of lists, tables and text views on tcell v2 |
 | [`wolfram`](https://tuiwasm.magnetosphere.net/?demo=wolfram) | screen | elementary cellular automata scrolling upward - 30, 90, 110 |
 <!-- END DEMOS -->
 

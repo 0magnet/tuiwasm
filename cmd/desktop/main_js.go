@@ -31,6 +31,7 @@ import (
 	_ "github.com/0magnet/tuiwasm/demos/upstream/boxes"
 	_ "github.com/0magnet/tuiwasm/demos/upstream/colors"
 	_ "github.com/0magnet/tuiwasm/demos/upstream/unicode"
+	_ "github.com/0magnet/tuiwasm/demos/widgets"
 )
 
 // opened is what the desk starts with, and the order they tile in. The rest

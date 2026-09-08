@@ -271,6 +271,9 @@ github.com/muesli/termenv
 ## explicit; go 1.24.0
 github.com/pterm/pterm
 github.com/pterm/pterm/internal
+# github.com/rivo/tview v0.42.0
+## explicit; go 1.18
+github.com/rivo/tview
 # github.com/rivo/uniseg v0.4.7
 ## explicit; go 1.18
 github.com/rivo/uniseg
