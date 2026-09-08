@@ -66,7 +66,7 @@ func decompress(data []byte) ([]byte, error) {
 		}
 
 		zr := flate.NewReader(bytes.NewReader(data[off:]))
-		defer func() { _ = zr.Close() }()
+		defer func() { _ = zr.Close() }() //nolint:errcheck,gosec
 		out, err := io.ReadAll(io.LimitReader(zr, maxFontSize))
 		if err != nil && len(out) == 0 {
 			return nil, fmt.Errorf("%w: %v", ErrBadFont, err)
@@ -78,7 +78,7 @@ func decompress(data []byte) ([]byte, error) {
 		if err != nil {
 			return nil, fmt.Errorf("%w: %v", ErrBadFont, err)
 		}
-		defer func() { _ = gz.Close() }()
+		defer func() { _ = gz.Close() }() //nolint:errcheck,gosec
 		out, err := io.ReadAll(io.LimitReader(gz, maxFontSize))
 		if err != nil && len(out) == 0 {
 			return nil, fmt.Errorf("%w: %v", ErrBadFont, err)
@@ -145,7 +145,7 @@ func (s *scanner) word(max int) ([]byte, bool) {
 	return s.b[start:s.i], true
 }
 
-// number reads an integer. With prefixed set it behaves like "%i", honouring a
+// number reads an integer. With prefixed set it behaves like "%i", honoring a
 // 0x or leading-zero base prefix; otherwise it is plain decimal, which is what
 // "%u" accepts here.
 func (s *scanner) number(prefixed bool) (int, bool) {

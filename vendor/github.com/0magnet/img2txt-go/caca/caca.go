@@ -7,7 +7,7 @@
 // and Jean-Yves Lamoureux <jylam@lnxscene.org>, released under the WTFPL.
 package caca
 
-// Colour indices, matching enum caca_color.
+// Color indices, matching enum caca_color.
 const (
 	Black        = 0x00
 	Blue         = 0x01
@@ -86,7 +86,7 @@ func (cv *Canvas) Clear() {
 	}
 }
 
-// SetColorANSI sets the current foreground and background colour indices.
+// SetColorANSI sets the current foreground and background color indices.
 func (cv *Canvas) SetColorANSI(fg, bg uint8) {
 	if fg > 0x20 || bg > 0x20 {
 		return
@@ -110,7 +110,7 @@ func (cv *Canvas) PutChar(x, y int, ch rune) {
 	cv.Attrs[x+y*cv.Width] = cv.curattr
 }
 
-// nearestANSI maps a 14-bit ARGB value onto the closest ANSI colour index.
+// nearestANSI maps a 14-bit ARGB value onto the closest ANSI color index.
 func nearestANSI(argb14 uint16) uint8 {
 	if argb14 < (0x10 | 0x40) {
 		return uint8(argb14 ^ 0x40)
@@ -152,7 +152,7 @@ func AttrToANSIFg(attr uint32) uint8 { return nearestANSI(uint16((attr >> 4) & 0
 // AttrToANSIBg returns the ANSI background index of an attribute.
 func AttrToANSIBg(attr uint32) uint8 { return nearestANSI(uint16(attr >> 18)) }
 
-// AttrToRGB12Fg returns the 12-bit RGB foreground colour of an attribute.
+// AttrToRGB12Fg returns the 12-bit RGB foreground color of an attribute.
 func AttrToRGB12Fg(attr uint32) uint16 {
 	fg := uint16((attr >> 4) & 0x3fff)
 	if fg < (0x10 | 0x40) {
@@ -167,7 +167,7 @@ func AttrToRGB12Fg(attr uint32) uint16 {
 	return (fg << 1) & 0x0fff
 }
 
-// AttrToRGB12Bg returns the 12-bit RGB background colour of an attribute.
+// AttrToRGB12Bg returns the 12-bit RGB background color of an attribute.
 func AttrToRGB12Bg(attr uint32) uint16 {
 	bg := uint16(attr >> 18)
 	if bg < (0x10 | 0x40) {

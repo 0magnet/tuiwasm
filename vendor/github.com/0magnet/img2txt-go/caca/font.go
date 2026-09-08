@@ -204,7 +204,7 @@ func (cv *Canvas) RenderCanvas(f *Font, buf []byte, width, height, pitch int) er
 				src = glyph
 			}
 
-			// Step 2: blend the glyph with the cell colours.
+			// Step 2: blend the glyph with the cell colors.
 			for j := 0; j < int(g.height); j++ {
 				lineOff := (starty+j)*pitch + 4*startx
 				for i := 0; i < int(g.width); i++ {

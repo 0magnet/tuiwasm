@@ -15,7 +15,7 @@ func rotateChar(ch rune) rune { return lookupPair(ch, rotateNoRotate, rotatePair
 
 // lookupPair implements the search flipchar(), flopchar() and rotatechar()
 // share: characters in the first table are left alone, characters in the second
-// are swapped with their neighbour, and anything else is returned unchanged.
+// are swapped with their neighbor, and anything else is returned unchanged.
 func lookupPair(ch rune, fixed, pairs []rune) rune {
 	for i := 0; fixed[i] != 0; i++ {
 		if ch == fixed[i] {
@@ -188,7 +188,7 @@ func (cv *Canvas) rotate90(pairFn func(*[2]rune), index func(w2, h2, x, y int) i
 				attr2 = cv.Attrs[cv.Width*y+x*2+1]
 			}
 
-			// A space contributes no colour of its own, or the rotated pair
+			// A space contributes no color of its own, or the rotated pair
 			// would take on an attribute nothing in it was drawn with.
 			if pair[0] == ' ' {
 				attr1 = attr2

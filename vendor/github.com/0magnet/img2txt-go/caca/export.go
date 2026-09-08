@@ -59,16 +59,16 @@ func (cv *Canvas) Export(format string) ([]byte, bool) {
 	return nil, false
 }
 
-// ansiPalette reorders libcaca colour indices into ANSI order.
+// ansiPalette reorders libcaca color indices into ANSI order.
 var ansiPalette = [16]uint8{
 	0, 4, 2, 6, 1, 5, 3, 7,
 	8, 12, 10, 14, 9, 13, 11, 15,
 }
 
-// attrToRGB24Fg returns the 24-bit foreground colour of an attribute.
+// attrToRGB24Fg returns the 24-bit foreground color of an attribute.
 func attrToRGB24Fg(attr uint32) uint32 { return rgb12to24(AttrToRGB12Fg(attr)) }
 
-// attrToRGB24Bg returns the 24-bit background colour of an attribute.
+// attrToRGB24Bg returns the 24-bit background color of an attribute.
 func attrToRGB24Bg(attr uint32) uint32 { return rgb12to24(AttrToRGB12Bg(attr)) }
 
 // rgb12to24 expands a 12-bit RGB value to 24 bits by duplicating each nibble.
@@ -164,7 +164,7 @@ func (cv *Canvas) exportCaca() []byte {
 	return b
 }
 
-// exportANSI writes CP437 text with ANSI colour codes.
+// exportANSI writes CP437 text with ANSI color codes.
 func (cv *Canvas) exportANSI() []byte {
 	var b []byte
 	prevfg, prevbg := -1, -1
@@ -217,7 +217,7 @@ func (cv *Canvas) exportANSI() []byte {
 	return b
 }
 
-// exportUTF8 writes UTF-8 text with ANSI colour codes.
+// exportUTF8 writes UTF-8 text with ANSI color codes.
 func (cv *Canvas) exportUTF8(cr bool) []byte {
 	var b []byte
 
@@ -564,13 +564,13 @@ func (cv *Canvas) exportBBFr() []byte {
 	return b
 }
 
-// ircPalette maps libcaca colour indices to mIRC colour numbers.
+// ircPalette maps libcaca color indices to mIRC color numbers.
 var ircPalette = [16]uint8{
 	1, 2, 3, 10, 5, 6, 7, 15, // dark
 	14, 12, 9, 11, 4, 13, 8, 0, // light
 }
 
-// exportIRC writes text with mIRC colour codes.
+// exportIRC writes text with mIRC color codes.
 func (cv *Canvas) exportIRC() []byte {
 	var b []byte
 
@@ -788,7 +788,7 @@ func (cv *Canvas) exportSVG() []byte {
 	return b
 }
 
-// ansi2troff maps colour indices to troff colour names.
+// ansi2troff maps color indices to troff color names.
 var ansi2troff = [16]string{
 	"black", "blue", "green", "cyan",
 	"red", "magenta", "yellow", "white",

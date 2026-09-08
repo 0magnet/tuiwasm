@@ -204,7 +204,7 @@ func (f *Font) parseHeader(line []byte) (hardblank []byte, commentLines int, err
 	}
 	n := 1
 	for i, p := range fields {
-		// Only old_layout is scanned with "%i", which honours a 0x or 0
+		// Only old_layout is scanned with "%i", which honors a 0x or 0
 		// base prefix; the rest are plain decimal.
 		v, vok := s.number(i == 3)
 		if !vok {
@@ -250,7 +250,7 @@ func (f *Font) finish(body []byte) (*Font, error) {
 			i--
 			ch := f.cv.GetChar(i, j)
 
-			// Hardblanks become U+00A0, which smushing rule 6 recognises and
+			// Hardblanks become U+00A0, which smushing rule 6 recognizes and
 			// which the flush turns back into a space.
 			if ch == f.Hardblank {
 				ch = 0xa0

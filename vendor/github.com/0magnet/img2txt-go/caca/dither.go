@@ -2,10 +2,10 @@ package caca
 
 import "math"
 
-// ColorMode selects how colours are picked for each cell.
+// ColorMode selects how colors are picked for each cell.
 type ColorMode int
 
-// Colour modes, matching enum color_mode.
+// Color modes, matching enum color_mode.
 const (
 	ColorModeMono ColorMode = iota
 	ColorModeGray
@@ -16,7 +16,7 @@ const (
 	ColorModeFull16
 )
 
-// rgbPalette is the 12-bit RGB palette used by the colour picker.
+// rgbPalette is the 12-bit RGB palette used by the color picker.
 var rgbPalette = [48]int32{
 	0x0, 0x0, 0x0,
 	0x0, 0x0, 0x7ff,
@@ -69,7 +69,7 @@ type Dither struct {
 	red, green, blue       [256]int32
 	alpha                  [256]int32
 
-	// Colour features.
+	// Color features.
 	gamma, brightness, contrast float32
 	gammatab                    [4097]int32
 
@@ -91,7 +91,7 @@ type Dither struct {
 	rnd *rngState
 }
 
-// mask2shift computes the right and left shifts that normalise a colour mask
+// mask2shift computes the right and left shifts that normalize a color mask
 // to 12 bits.
 func mask2shift(mask uint32) (right, left int) {
 	if mask == 0 {
@@ -110,7 +110,7 @@ func mask2shift(mask uint32) (right, left int) {
 }
 
 // NewDither creates a dither object for a bitmap with the given geometry and
-// colour masks.
+// color masks.
 func NewDither(bpp, w, h, pitch int, rmask, gmask, bmask, amask uint32) *Dither {
 	if w < 0 || h < 0 || pitch < 0 || bpp > 32 || bpp < 8 {
 		return nil
@@ -168,7 +168,7 @@ func (d *Dither) SetBrightness(b float32) { d.brightness = b }
 // output.
 func (d *Dither) SetContrast(c float32) { d.contrast = c }
 
-// SetGamma sets the gamma. A negative value inverts the colours; zero is an
+// SetGamma sets the gamma. A negative value inverts the colors; zero is an
 // error.
 func (d *Dither) SetGamma(gamma float32) bool {
 	if gamma < 0.0 {
@@ -325,7 +325,7 @@ func gammapow(x, y float32) float32 {
 	return float32(math.Pow(float64(x), float64(y)))
 }
 
-// getRGBA accumulates the colour of one source pixel into rgba, applying the
+// getRGBA accumulates the color of one source pixel into rgba, applying the
 // gamma table.
 func (d *Dither) getRGBA(pixels []byte, x, y int, rgba *[4]uint32) {
 	off := (d.bpp/8)*x + d.pitch*y
