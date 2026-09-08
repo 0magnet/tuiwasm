@@ -177,6 +177,11 @@ func run(screen tcell.Screen, cols, rows int) error {
 // tviewVersion is the tview release this was built against, read from the
 // build info rather than written down, so the status line cannot claim a
 // version the binary does not contain.
+//
+// It reads "?" under TinyGo, which does not populate the dependency list in
+// debug.ReadBuildInfo the way the standard toolchain does. That is why this
+// degrades to a question mark rather than asserting: a version printed from a
+// constant would have been wrong in exactly the build that cannot check it.
 func tviewVersion() string {
 	info, ok := debug.ReadBuildInfo()
 	if !ok {
