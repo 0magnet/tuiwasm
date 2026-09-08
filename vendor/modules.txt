@@ -61,9 +61,10 @@ github.com/0magnet/sh/v3/internal
 github.com/0magnet/sh/v3/interp
 github.com/0magnet/sh/v3/pattern
 github.com/0magnet/sh/v3/syntax
-# github.com/0magnet/termanim v0.0.0-20260908184637-fa4618403fe1
+# github.com/0magnet/termanim v0.0.0-20260908204112-aaeb20dd4f88
 ## explicit; go 1.26.0
 github.com/0magnet/termanim/aquarium
+github.com/0magnet/termanim/atom
 github.com/0magnet/termanim/aurora
 github.com/0magnet/termanim/boids
 github.com/0magnet/termanim/bonsai
@@ -81,6 +82,7 @@ github.com/0magnet/termanim/langton
 github.com/0magnet/termanim/lavalamp
 github.com/0magnet/termanim/life
 github.com/0magnet/termanim/lightning
+github.com/0magnet/termanim/logo
 github.com/0magnet/termanim/matrix
 github.com/0magnet/termanim/maze
 github.com/0magnet/termanim/metaballs

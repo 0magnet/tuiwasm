@@ -28,8 +28,8 @@ github.com/0magnet/proxima5/v2 v2.0.0-20260902091202-e45c029b343b h1:416NgclNHUF
 github.com/0magnet/proxima5/v2 v2.0.0-20260902091202-e45c029b343b/go.mod h1:f/1Bew8ifezklzYn6ZYOa0S1NfxCwZysCYigBQmYZOM=
 github.com/0magnet/sh/v3 v3.13.2-0.20260818190530-13d0024da85c h1:qKcMe7/qRLFPbk/HWEYy5QuYY+luINKnlen9BhDPRZU=
 github.com/0magnet/sh/v3 v3.13.2-0.20260818190530-13d0024da85c/go.mod h1:IdyC3iqIKArn4KOl0a58dV2spH0PH6pLJKOZYB2kFR0=
-github.com/0magnet/termanim v0.0.0-20260908184637-fa4618403fe1 h1:5F3zE16nxzH8T7oRbOwqKyred1BH6ATAEttXPlsV+rM=
-github.com/0magnet/termanim v0.0.0-20260908184637-fa4618403fe1/go.mod h1:+onWL0kYoZ0M0DnO7pXaN0aGeq7KRwXWQf+9vxgiKYY=
+github.com/0magnet/termanim v0.0.0-20260908204112-aaeb20dd4f88 h1:EKrn7MOw0joVSK5ELkHTrnMns+vZBSdzwIofAnlqFbQ=
+github.com/0magnet/termanim v0.0.0-20260908204112-aaeb20dd4f88/go.mod h1:+onWL0kYoZ0M0DnO7pXaN0aGeq7KRwXWQf+9vxgiKYY=
 github.com/0magnet/toilet-go v0.0.0-20260908184643-00a3f30588b8 h1:LBui+DIroS9dAJFEh8k9Sgch6FCmW+ni0WUpTv/VCBU=
 github.com/0magnet/toilet-go v0.0.0-20260908184643-00a3f30588b8/go.mod h1:47/aM3nfAYZj3BQ8TvpmaFhxSqPC3qPfOkxPuXr6g+s=
 github.com/0magnet/u-root v0.16.1-0.20260814161052-156e0b67262b h1:1p4E2ok/rmNJU2LsGx6iMl0bIAMgl1QOC2H8doC+9ww=

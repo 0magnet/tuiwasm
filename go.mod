@@ -10,7 +10,7 @@ require (
 	github.com/0magnet/lolcat-go v0.0.0-20260907230215-22c54b7702c7
 	github.com/0magnet/proxima5 v0.0.0-20260908180128-ed5a78054456
 	github.com/0magnet/proxima5/v2 v2.0.0-20260902091202-e45c029b343b
-	github.com/0magnet/termanim v0.0.0-20260908184637-fa4618403fe1
+	github.com/0magnet/termanim v0.0.0-20260908204112-aaeb20dd4f88
 	github.com/0magnet/toilet-go v0.0.0-20260908184643-00a3f30588b8
 	github.com/0magnet/xterm-go v0.0.0-20260908200322-79e29f0f6b91
 	github.com/charmbracelet/lipgloss v1.1.1-0.20250404203927-76690c660834

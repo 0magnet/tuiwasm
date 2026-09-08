@@ -9,10 +9,10 @@ Building and serving below.
 
 ![tuiwasm in the browser](docs/tuiwasm-demo.png "four libraries in four windows: a websh shell, lipgloss styles, a table, and truecolor boxes")
 
-![All forty-three demos](docs/tuiwasm-gallery.png "every demo the launcher offers, one frame each, captured from the browser build")
+![All forty-five demos](docs/tuiwasm-gallery.png "every demo the launcher offers, one frame each, captured from the browser build")
 
-Forty-three demos, every one of them a frame captured from the running browser
-build: thirty-four animations from
+Forty-five demos, every one of them a frame captured from the running browser
+build: thirty-six animations from
 [termanim](https://github.com/0magnet/termanim), tcell's own demos, and the
 tview, lipgloss and pterm ones written here.
 
