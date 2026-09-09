@@ -22,11 +22,11 @@ github.com/0magnet/afero/mem
 ## explicit; go 1.26.0
 github.com/0magnet/calvin
 github.com/0magnet/calvin/clihelp
-# github.com/0magnet/desk v0.0.0-20260908180101-e4718ff64abf
+# github.com/0magnet/desk v0.0.0-20260909002914-271c2999cd2c
 ## explicit; go 1.26
 github.com/0magnet/desk
 github.com/0magnet/desk/dom
-# github.com/0magnet/desk/panes v0.0.0-20260908180101-e4718ff64abf
+# github.com/0magnet/desk/panes v0.0.0-20260909002914-271c2999cd2c
 ## explicit; go 1.26
 github.com/0magnet/desk/panes/files
 github.com/0magnet/desk/panes/hostauth
@@ -61,7 +61,7 @@ github.com/0magnet/sh/v3/internal
 github.com/0magnet/sh/v3/interp
 github.com/0magnet/sh/v3/pattern
 github.com/0magnet/sh/v3/syntax
-# github.com/0magnet/termanim v0.0.0-20260908211352-748b2f89ddb3
+# github.com/0magnet/termanim v0.0.0-20260908211604-399e16bb92f6
 ## explicit; go 1.26.0
 github.com/0magnet/termanim/aquarium
 github.com/0magnet/termanim/atom
@@ -100,7 +100,7 @@ github.com/0magnet/termanim/snow
 github.com/0magnet/termanim/starfield
 github.com/0magnet/termanim/tunnel
 github.com/0magnet/termanim/wolfram
-# github.com/0magnet/toilet-go v0.0.0-20260908184643-00a3f30588b8
+# github.com/0magnet/toilet-go v0.0.0-20260909095410-ea1263b381d1
 ## explicit; go 1.26.0
 github.com/0magnet/toilet-go/canvas
 github.com/0magnet/toilet-go/figlet
@@ -109,7 +109,7 @@ github.com/0magnet/toilet-go/toilet
 # github.com/0magnet/u-root v0.16.1-0.20260814161052-156e0b67262b
 ## explicit; go 1.25.7
 github.com/0magnet/u-root/pkg/ls
-# github.com/0magnet/websh v0.0.0-20260908184825-10432f75b8da
+# github.com/0magnet/websh v0.0.0-20260909095802-ace31d005a7e
 ## explicit; go 1.26.0
 github.com/0magnet/websh/shell
 github.com/0magnet/websh/web
