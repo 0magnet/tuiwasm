@@ -28,8 +28,8 @@ github.com/0magnet/proxima5/v2 v2.0.0-20260902091202-e45c029b343b h1:416NgclNHUF
 github.com/0magnet/proxima5/v2 v2.0.0-20260902091202-e45c029b343b/go.mod h1:f/1Bew8ifezklzYn6ZYOa0S1NfxCwZysCYigBQmYZOM=
 github.com/0magnet/sh/v3 v3.13.2-0.20260818190530-13d0024da85c h1:qKcMe7/qRLFPbk/HWEYy5QuYY+luINKnlen9BhDPRZU=
 github.com/0magnet/sh/v3 v3.13.2-0.20260818190530-13d0024da85c/go.mod h1:IdyC3iqIKArn4KOl0a58dV2spH0PH6pLJKOZYB2kFR0=
-github.com/0magnet/termanim v0.0.0-20260908211604-399e16bb92f6 h1:MNwmrK084h1w9yDcR5l0L3Eh/oJ7SLmfTTRqeKilZSA=
-github.com/0magnet/termanim v0.0.0-20260908211604-399e16bb92f6/go.mod h1:+onWL0kYoZ0M0DnO7pXaN0aGeq7KRwXWQf+9vxgiKYY=
+github.com/0magnet/termanim v0.0.0-20260912092751-2d3151f78a72 h1:AQQ4DocaHGGm83RTNtgZWVFBCsoOhRv63YxOr0mlkbA=
+github.com/0magnet/termanim v0.0.0-20260912092751-2d3151f78a72/go.mod h1:GWNgt2KhsKUcnDh+Fes1xnCo5MgykNIIDWmC+YoMJ3o=
 github.com/0magnet/toilet-go v0.0.0-20260909095410-ea1263b381d1 h1:+sw7pgO0CQf0h1/6cp8ZDRUpilbjCs04qHr2M0FS6sM=
 github.com/0magnet/toilet-go v0.0.0-20260909095410-ea1263b381d1/go.mod h1:YZv+PrT4DOzIeBEFxz0qtNH/MjPtxwy6ep38nsTEhMI=
 github.com/0magnet/u-root v0.16.1-0.20260814161052-156e0b67262b h1:1p4E2ok/rmNJU2LsGx6iMl0bIAMgl1QOC2H8doC+9ww=
@@ -93,8 +93,8 @@ github.com/gdamore/encoding v1.0.1 h1:YzKZckdBL6jVt2Gc+5p82qhrGiqMdG/eNs6Wy0u3Uh
 github.com/gdamore/encoding v1.0.1/go.mod h1:0Z0cMFinngz9kS1QfMjCP8TY7em3bZYeeklsSDPivEo=
 github.com/gdamore/tcell/v2 v2.13.10 h1:Afs3JKt83HnhuUKdZ3MnxUgOqQRWftj5JyDqv1LLynA=
 github.com/gdamore/tcell/v2 v2.13.10/go.mod h1:+Wfe208WDdB7INEtCsNrAN6O2m+wsTPk1RAovjaILlo=
-github.com/gdamore/tcell/v3 v3.4.2 h1:gGW+6z2Bz5Wl2mNwFlm9+eRmg2JQrWcKjSkL1LRfpNU=
-github.com/gdamore/tcell/v3 v3.4.2/go.mod h1:Oe5U3S3jm3NzypswDNUhe+LUnF5CoFq2b4sepD++QHo=
+github.com/gdamore/tcell/v3 v3.5.0 h1:SCp9czLv2K2aPORgD6+4fjV0xNAzKIkiezCkp6bHLe4=
+github.com/gdamore/tcell/v3 v3.5.0/go.mod h1:Oe5U3S3jm3NzypswDNUhe+LUnF5CoFq2b4sepD++QHo=
 github.com/go-quicktest/qt v1.102.0 h1:HSQxCeh5YZH3EL3W39ixjtyaEhcWSXQHtHnMBzSs474=
 github.com/go-quicktest/qt v1.102.0/go.mod h1:p4lGIVX+8Wa6ZPNDvqcxq36XpUDLh42FLetFU7odllI=
 github.com/google/go-cmp v0.7.0 h1:wk8382ETsv4JYUZwIsn6YpYiWiBsYLSJiTsyBybVuN8=

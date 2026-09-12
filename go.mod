@@ -10,7 +10,7 @@ require (
 	github.com/0magnet/lolcat-go v0.0.0-20260907230215-22c54b7702c7
 	github.com/0magnet/proxima5 v0.0.0-20260908180128-ed5a78054456
 	github.com/0magnet/proxima5/v2 v2.0.0-20260902091202-e45c029b343b
-	github.com/0magnet/termanim v0.0.0-20260908211604-399e16bb92f6
+	github.com/0magnet/termanim v0.0.0-20260912092751-2d3151f78a72
 	github.com/0magnet/toilet-go v0.0.0-20260909095410-ea1263b381d1
 	github.com/0magnet/xterm-go v0.0.0-20260910002153-8f449d30e0f4
 	github.com/charmbracelet/lipgloss v1.1.1-0.20250404203927-76690c660834
@@ -57,7 +57,7 @@ require (
 	github.com/dlclark/regexp2/v2 v2.8.0 // indirect
 	github.com/dustin/go-humanize v1.0.1 // indirect
 	github.com/gdamore/encoding v1.0.1 // indirect
-	github.com/gdamore/tcell/v3 v3.4.2
+	github.com/gdamore/tcell/v3 v3.5.0
 	github.com/gookit/color v1.6.1 // indirect
 	github.com/inconshreveable/mousetrap v1.1.0 // indirect
 	github.com/itchyny/gojq v0.12.19 // indirect
