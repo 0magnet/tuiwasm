@@ -113,6 +113,7 @@ build nobody ships.
 | demo | shape | what it is |
 | --- | --- | --- |
 | [`aquarium`](https://tuiwasm.magnetosphere.net/?demo=aquarium) | screen | fish swimming past swaying seaweed |
+| [`atom`](https://tuiwasm.magnetosphere.net/?demo=atom) | screen | electrons on tilted orbits round a glowing nucleus |
 | [`aurora`](https://tuiwasm.magnetosphere.net/?demo=aurora) | screen | curtains of light, folding, with the creases where they turn |
 | [`boids`](https://tuiwasm.magnetosphere.net/?demo=boids) | screen | flocking by separation, alignment and cohesion |
 | [`bonsai`](https://tuiwasm.magnetosphere.net/?demo=bonsai) | screen | a bonsai tree growing branch by branch |
@@ -132,6 +133,7 @@ build nobody ships.
 | [`lavalamp`](https://tuiwasm.magnetosphere.net/?demo=lavalamp) | screen | wax that heats, rises, cools and sinks |
 | [`life`](https://tuiwasm.magnetosphere.net/?demo=life) | screen | Conway's life, colored by how long a cell has lived |
 | [`lightning`](https://tuiwasm.magnetosphere.net/?demo=lightning) | screen | a branching discharge: leader, return stroke, afterglow |
+| [`magnetosphere`](https://tuiwasm.magnetosphere.net/?demo=magnetosphere) | screen | the logo from magnetosphere.net, counter-scrolling |
 | [`matrix`](https://tuiwasm.magnetosphere.net/?demo=matrix) | screen | falling columns of glyphs |
 | [`maze`](https://tuiwasm.magnetosphere.net/?demo=maze) | screen | a maze carved by backtracking, then solved |
 | [`metaballs`](https://tuiwasm.magnetosphere.net/?demo=metaballs) | screen | blobs that bulge and merge as they approach |
@@ -159,6 +161,17 @@ build nobody ships.
 
 The table is generated from the registry by `go run ./cmd/gendemos`; a list of
 what exists, kept by hand beside the thing that knows, is a list that is wrong.
+It was, too: `atom` and `magnetosphere` were registered, running and in neither
+the table nor anywhere else, because the command had not been run since they
+were added.
+
+The same command writes
+**[tuiwasm.magnetosphere.net/demos/](https://tuiwasm.magnetosphere.net/demos/)**,
+which is that list as a page. It exists because every demo here is one URL with
+a different query string and one terminal drawn into a canvas: from outside the
+tab there is nothing to read, and not one of these forty-five names appeared
+anywhere a search engine could see. `go run ./cmd/gendemos -check` fails when
+either output has fallen behind.
 
 A demo declares which shape it is and nothing else. It never learns whether it
 is in a browser, in websh, or in a real terminal — one takes an `io.Writer`,

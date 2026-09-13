@@ -54,8 +54,9 @@ const (
 )
 
 var (
-	path  = flag.String("readme", "README.md", "the file to rewrite")
-	check = flag.Bool("check", false, "report whether the file is up to date; write nothing")
+	path    = flag.String("readme", "README.md", "the file to rewrite")
+	check   = flag.Bool("check", false, "report whether the file is up to date; write nothing")
+	docsDir = flag.String("docs", "docs", "the GitHub Pages root, where demos/index.html is written")
 )
 
 func main() {
@@ -72,23 +73,41 @@ func main() {
 		os.Exit(1)
 	}
 
+	// Both outputs are checked, and both are written, and neither sits behind
+	// the other's "nothing changed". A README that happened to be current used
+	// to return here — which would leave the published demo index stale for as
+	// long as nobody touched a description, which is the failure this command
+	// exists to prevent, one level up.
 	if *check {
-		if next != string(old) {
-			fmt.Fprintln(os.Stderr, "gendemos: out of date — run `go run ./cmd/gendemos`")
+		stale := next != string(old)
+		if stale {
+			fmt.Fprintln(os.Stderr, "gendemos: README out of date")
+		}
+		if err := writeSite(*docsDir, true); err != nil {
+			fmt.Fprintln(os.Stderr, "gendemos:", err)
+			stale = true
+		}
+		if stale {
+			fmt.Fprintln(os.Stderr, "gendemos: run `go run ./cmd/gendemos`")
 			os.Exit(1)
 		}
 		fmt.Println("gendemos: up to date")
 		return
 	}
+
 	if next == string(old) {
-		fmt.Println("gendemos: no change")
-		return
+		fmt.Println("gendemos: README unchanged")
+	} else {
+		if err := os.WriteFile(*path, []byte(next), 0o644); err != nil { //nolint:gosec // a README is world-readable by design
+			fmt.Fprintln(os.Stderr, "gendemos:", err)
+			os.Exit(1)
+		}
+		fmt.Printf("gendemos: wrote %d demos to %s\n", len(demos.All()), *path)
 	}
-	if err := os.WriteFile(*path, []byte(next), 0o644); err != nil { //nolint:gosec // a README is world-readable by design
+	if err := writeSite(*docsDir, false); err != nil {
 		fmt.Fprintln(os.Stderr, "gendemos:", err)
 		os.Exit(1)
 	}
-	fmt.Printf("gendemos: wrote %d demos to %s\n", len(demos.All()), *path)
 }
 
 // table renders the demo list.

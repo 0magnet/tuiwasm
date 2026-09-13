@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>All 45 demos — tuiwasm</title>
+<meta name="description" content="Every one of the 45 terminal demos and animations tuiwasm runs in a browser tab — Conway&#39;s Life, Langton&#39;s ant, boids, a Julia set, reaction-diffusion, matrix rain, plasma, fire and the rest — each one a link that opens it running.">
+<meta name="author" content="0magnet">
+<link rel="canonical" href="https://tuiwasm.magnetosphere.net/demos/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="magnetosphere">
+<meta property="og:title" content="All 45 demos — tuiwasm">
+<meta property="og:description" content="Every one of the 45 terminal demos and animations tuiwasm runs in a browser tab — Conway&#39;s Life, Langton&#39;s ant, boids, a Julia set, reaction-diffusion, matrix rain, plasma, fire and the rest — each one a link that opens it running.">
+<meta property="og:url" content="https://tuiwasm.magnetosphere.net/demos/">
+<meta property="og:image" content="https://tuiwasm.magnetosphere.net/tuiwasm-gallery.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="All 45 demos — tuiwasm">
+<meta name="twitter:description" content="Every one of the 45 terminal demos and animations tuiwasm runs in a browser tab — Conway&#39;s Life, Langton&#39;s ant, boids, a Julia set, reaction-diffusion, matrix rain, plasma, fire and the rest — each one a link that opens it running.">
+<meta name="twitter:image" content="https://tuiwasm.magnetosphere.net/tuiwasm-gallery.png">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"CollectionPage","name":"All 45 demos — tuiwasm","url":"https://tuiwasm.magnetosphere.net/demos/",
+"description":"Every one of the 45 terminal demos and animations tuiwasm runs in a browser tab — Conway's Life, Langton's ant, boids, a Julia set, reaction-diffusion, matrix rain, plasma, fire and the rest — each one a link that opens it running.",
+"isPartOf":{"@type":"WebSite","name":"tuiwasm","url":"https://tuiwasm.magnetosphere.net/"}}
+</script>
+<style>
+:root { color-scheme: light dark;
+        --bg:#ffffff; --fg:#15171c; --muted:#5c6470; --line:#e4e7ec; --accent:#2f6f4f; --card:#f7f8fa; }
+@media (prefers-color-scheme: dark) {
+  :root { --bg:#0d0f14; --fg:#e6e9ee; --muted:#8b94a3; --line:#232833; --accent:#6fce9f; --card:#141821; }
+}
+* { box-sizing: border-box; }
+body { margin:0; background:var(--bg); color:var(--fg);
+       font:16px/1.65 ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; }
+.wrap { max-width: 880px; margin:0 auto; padding: 2rem 1.1rem 5rem; }
+a { color:var(--accent); }
+nav { font-size:.86rem; color:var(--muted); margin-bottom:2rem; }
+nav a { color:var(--muted); text-decoration:none; }
+h1 { font-size:1.9rem; line-height:1.2; margin:0 0 .6rem; letter-spacing:-.01em; }
+h2 { font-size:1.1rem; margin:2.6rem 0 .2rem; padding-bottom:.45rem; border-bottom:1px solid var(--line); }
+.lead { color:var(--muted); max-width:70ch; }
+img.gallery { width:100%; height:auto; border:1px solid var(--line); border-radius:10px;
+              margin:1.6rem 0; background:#000; }
+ul.demos { list-style:none; padding:0; margin:.8rem 0 0; }
+ul.demos li { padding:.55rem 0; border-bottom:1px solid var(--line); display:flex; gap:.9rem;
+              align-items:baseline; flex-wrap:wrap; }
+ul.demos a { font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-weight:600;
+             min-width:9rem; text-decoration:none; }
+ul.demos a:hover { text-decoration:underline; }
+ul.demos span { color:var(--muted); }
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav><a href="../">tuiwasm</a> › demos</nav>
+<h1>All 45 demos</h1>
+<p class="lead">tuiwasm runs Go's terminal-UI libraries — tcell for the screen layer, and the Charm
+stack above it: lipgloss for styling, bubbletea for the update loop, glamour for Markdown — inside a
+browser tab, drawing into a real terminal emulator built on
+<a href="https://github.com/0magnet/xterm-go">xterm-go</a>. Every demo below is the same
+WebAssembly binary with a different query string; each link opens it running.</p>
+<img class="gallery" src="../tuiwasm-gallery.png"
+     alt="Every tuiwasm demo, one frame each, captured from the browser build" loading="lazy">
+<h2>Screen demos <span class="lead">— they paint cells and read keys</span></h2>
+<ul class="demos">
+<li><a href="https://tuiwasm.magnetosphere.net/?demo=aquarium">aquarium</a> <span>fish swimming past swaying seaweed</span></li>
+<li><a href="https://tuiwasm.magnetosphere.net/?demo=atom">atom</a> <span>electrons on tilted orbits round a glowing nucleus</span></li>
+<li><a href="https://tuiwasm.magnetosphere.net/?demo=aurora">aurora</a> <span>curtains of light, folding, with the creases where they turn</span></li>
+<li><a href="https://tuiwasm.magnetosphere.net/?demo=boids">boids</a> <span>flocking by separation, alignment and cohesion</span></li>
+<li><a href="https://tuiwasm.magnetosphere.net/?demo=bonsai">bonsai</a> <span>a bonsai tree growing branch by branch</span></li>
+<li><a href="https://tuiwasm.magnetosphere.net/?demo=bounce">bounce</a> <span>the screensaver logo, and the wait for it to hit a corner</span></li>
+<li><a href="https://tuiwasm.magnetosphere.net/?demo=boxes">boxes</a> <span>tcell&#39;s own boxes demo — random boxes, timed</span></li>
+<li><a href="https://tuiwasm.magnetosphere.net/?demo=clock">clock</a> <span>an analog clock, after aclock</span></li>
+<li><a href="https://tuiwasm.magnetosphere.net/?demo=colors">colors</a> <span>tcell&#39;s own colors demo — boxes cycling through the palette</span></li>
+<li><a href="https://tuiwasm.magnetosphere.net/?demo=cube">cube</a> <span>a rotating wireframe solid, shaded by depth</span></li>
+<li><a href="https://tuiwasm.magnetosphere.net/?demo=donut">donut</a> <span>a lit torus with a z-buffer</span></li>
+<li><a href="https://tuiwasm.magnetosphere.net/?demo=fire">fire</a> <span>a heat grid seeded with noise and cooled upward</span></li>
+<li><a href="https://tuiwasm.magnetosphere.net/?demo=fireworks">fireworks</a> <span>shells that rise, burst and droop into willows</span></li>
+<li><a href="https://tuiwasm.magnetosphere.net/?demo=flow">flow</a> <span>particles carried through a divergence-free curl-noise field</span></li>
+<li><a href="https://tuiwasm.magnetosphere.net/?demo=frost">frost</a> <span>a crystal growing by diffusion-limited aggregation</span></li>
+<li><a href="https://tuiwasm.magnetosphere.net/?demo=julia">julia</a> <span>a Julia set morphing as its parameter walks the cardioid</span></li>
+<li><a href="https://tuiwasm.magnetosphere.net/?demo=langton">langton</a> <span>Langton&#39;s ants: chaos, then the highway</span></li>
+<li><a href="https://tuiwasm.magnetosphere.net/?demo=lavalamp">lavalamp</a> <span>wax that heats, rises, cools and sinks</span></li>
+<li><a href="https://tuiwasm.magnetosphere.net/?demo=life">life</a> <span>Conway&#39;s life, colored by how long a cell has lived</span></li>
+<li><a href="https://tuiwasm.magnetosphere.net/?demo=lightning">lightning</a> <span>a branching discharge: leader, return stroke, afterglow</span></li>
+<li><a href="https://tuiwasm.magnetosphere.net/?demo=magnetosphere">magnetosphere</a> <span>the logo from magnetosphere.net, counter-scrolling</span></li>
+<li><a href="https://tuiwasm.magnetosphere.net/?demo=matrix">matrix</a> <span>falling columns of glyphs</span></li>
+<li><a href="https://tuiwasm.magnetosphere.net/?demo=maze">maze</a> <span>a maze carved by backtracking, then solved</span></li>
+<li><a href="https://tuiwasm.magnetosphere.net/?demo=metaballs">metaballs</a> <span>blobs that bulge and merge as they approach</span></li>
+<li><a href="https://tuiwasm.magnetosphere.net/?demo=moire">moire</a> <span>two drifting ripples interfering</span></li>
+<li><a href="https://tuiwasm.magnetosphere.net/?demo=parrot">parrot</a> <span>the party parrot, rolling once around the hue wheel</span></li>
+<li><a href="https://tuiwasm.magnetosphere.net/?demo=pendulum">pendulum</a> <span>double pendulums released together, shearing apart</span></li>
+<li><a href="https://tuiwasm.magnetosphere.net/?demo=physarum">physarum</a> <span>slime mold laying trails and building a transport network</span></li>
+<li><a href="https://tuiwasm.magnetosphere.net/?demo=pipes">pipes</a> <span>pipes growing and turning, with correct elbows</span></li>
+<li><a href="https://tuiwasm.magnetosphere.net/?demo=plasma">plasma</a> <span>summed sine waves of position, offset by time</span></li>
+<li><a href="https://tuiwasm.magnetosphere.net/?demo=proxima">proxima</a> <span>Escape from Proxima 5 — gdamore&#39;s tcell space shooter</span></li>
+<li><a href="https://tuiwasm.magnetosphere.net/?demo=proxima2">proxima2</a> <span>Escape from Proxima 5 on tcell v2 — the same game, one major back</span></li>
+<li><a href="https://tuiwasm.magnetosphere.net/?demo=rain">rain</a> <span>drops with depth, slant, streaks and splashes</span></li>
+<li><a href="https://tuiwasm.magnetosphere.net/?demo=reaction">reaction</a> <span>Gray-Scott reaction-diffusion: spots that divide into a labyrinth</span></li>
+<li><a href="https://tuiwasm.magnetosphere.net/?demo=ripple">ripple</a> <span>a ripple tank: rain falling, rings meeting and interfering</span></li>
+<li><a href="https://tuiwasm.magnetosphere.net/?demo=sand">sand</a> <span>grains heaping at their angle of repose</span></li>
+<li><a href="https://tuiwasm.magnetosphere.net/?demo=snow">snow</a> <span>flakes that sway, settle and drift into banks</span></li>
+<li><a href="https://tuiwasm.magnetosphere.net/?demo=starfield">starfield</a> <span>stars streaming past the viewer</span></li>
+<li><a href="https://tuiwasm.magnetosphere.net/?demo=tunnel">tunnel</a> <span>flying down a textured tube</span></li>
+<li><a href="https://tuiwasm.magnetosphere.net/?demo=unicode">unicode</a> <span>tcell&#39;s own unicode demo — wide, combining and emoji glyphs</span></li>
+<li><a href="https://tuiwasm.magnetosphere.net/?demo=widgets">widgets</a> <span>tview — a flexbox of lists, tables and text views on tcell v2</span></li>
+<li><a href="https://tuiwasm.magnetosphere.net/?demo=wolfram">wolfram</a> <span>elementary cellular automata scrolling upward - 30, 90, 110</span></li>
+</ul>
+<h2>Text demos <span class="lead">— they write styled text</span></h2>
+<ul class="demos">
+<li><a href="https://tuiwasm.magnetosphere.net/?demo=charts">charts</a> <span>asciigraph — a line plot in cells</span></li>
+<li><a href="https://tuiwasm.magnetosphere.net/?demo=styles">styles</a> <span>lipgloss — borders, color, alignment</span></li>
+<li><a href="https://tuiwasm.magnetosphere.net/?demo=tables">tables</a> <span>go-pretty — the wasm compatibility matrix</span></li>
+</ul>
+<p class="lead" style="margin-top:2.5rem">Source:
+<a href="https://github.com/0magnet/tuiwasm">github.com/0magnet/tuiwasm</a>.
+More Go and WebAssembly projects: <a href="https://magnetosphere.net/software">magnetosphere.net/software</a>.</p>
+</div>
+</body>
+</html>
