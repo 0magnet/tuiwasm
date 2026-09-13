@@ -4,13 +4,13 @@ go 1.26.5
 
 require (
 	github.com/0magnet/calvin v0.0.0-20260908180241-0893f4bff56a
-	github.com/0magnet/desk v0.0.0-20260910005425-be63baa02041
-	github.com/0magnet/desk/panes v0.0.0-20260910005425-be63baa02041
+	github.com/0magnet/desk v0.0.0-20260912154728-bfe10d475353
+	github.com/0magnet/desk/panes v0.0.0-20260912154728-bfe10d475353
 	github.com/0magnet/glamour v1.0.1-0.20260828223301-bc6921785a82
 	github.com/0magnet/lolcat-go v0.0.0-20260907230215-22c54b7702c7
 	github.com/0magnet/proxima5 v0.0.0-20260908180128-ed5a78054456
 	github.com/0magnet/proxima5/v2 v2.0.0-20260902091202-e45c029b343b
-	github.com/0magnet/termanim v0.0.0-20260912092751-2d3151f78a72
+	github.com/0magnet/termanim v0.0.0-20260912180616-5fa253f0fdbd
 	github.com/0magnet/toilet-go v0.0.0-20260909095410-ea1263b381d1
 	github.com/0magnet/xterm-go v0.0.0-20260910002153-8f449d30e0f4
 	github.com/charmbracelet/lipgloss v1.1.1-0.20250404203927-76690c660834
@@ -49,7 +49,7 @@ require (
 	github.com/charmbracelet/colorprofile v0.4.3 // indirect
 	github.com/charmbracelet/x/ansi v0.11.8 // indirect
 	github.com/charmbracelet/x/cellbuf v0.0.15 // indirect
-	github.com/charmbracelet/x/exp/slice v0.0.0-20260906004030-3986e9119cf9 // indirect
+	github.com/charmbracelet/x/exp/slice v0.0.0-20260913004009-c615ff2f7805 // indirect
 	github.com/charmbracelet/x/term v0.2.2 // indirect
 	github.com/clipperhouse/displaywidth v0.11.0 // indirect
 	github.com/clipperhouse/uax29/v2 v2.7.0 // indirect
