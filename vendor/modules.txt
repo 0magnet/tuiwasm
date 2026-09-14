@@ -46,7 +46,7 @@ github.com/0magnet/img2txt-go/caca
 # github.com/0magnet/lolcat-go v0.0.0-20260907230215-22c54b7702c7
 ## explicit; go 1.25.0
 github.com/0magnet/lolcat-go/lol
-# github.com/0magnet/proxima5 v0.0.0-20260908180128-ed5a78054456
+# github.com/0magnet/proxima5 v0.0.0-20260914191450-f19cf6c054fc
 ## explicit; go 1.26.0
 github.com/0magnet/proxima5
 github.com/0magnet/proxima5/internal/views
@@ -109,7 +109,7 @@ github.com/0magnet/toilet-go/toilet
 # github.com/0magnet/u-root v0.16.1-0.20260814161052-156e0b67262b
 ## explicit; go 1.25.7
 github.com/0magnet/u-root/pkg/ls
-# github.com/0magnet/websh v0.0.0-20260914105002-5312a522f117
+# github.com/0magnet/websh v0.0.0-20260914105251-9f3f0b910116
 ## explicit; go 1.26.0
 github.com/0magnet/websh/shell
 github.com/0magnet/websh/web

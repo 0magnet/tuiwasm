@@ -8,7 +8,7 @@ require (
 	github.com/0magnet/desk/panes v0.0.0-20260914105004-76463198b217
 	github.com/0magnet/glamour v1.0.1-0.20260828223301-bc6921785a82
 	github.com/0magnet/lolcat-go v0.0.0-20260907230215-22c54b7702c7
-	github.com/0magnet/proxima5 v0.0.0-20260908180128-ed5a78054456
+	github.com/0magnet/proxima5 v0.0.0-20260914191450-f19cf6c054fc
 	github.com/0magnet/proxima5/v2 v2.0.0-20260902091202-e45c029b343b
 	github.com/0magnet/termanim v0.0.0-20260914104740-c2d1737f7963
 	github.com/0magnet/toilet-go v0.0.0-20260914104758-0bd3b6b76ab4
@@ -41,7 +41,7 @@ require (
 	github.com/0magnet/afero v1.15.1-0.20260816202415-9f9d46a34dcd // indirect
 	github.com/0magnet/sh/v3 v3.13.2-0.20260818190530-13d0024da85c
 	github.com/0magnet/u-root v0.16.1-0.20260814161052-156e0b67262b // indirect
-	github.com/0magnet/websh v0.0.0-20260914105002-5312a522f117
+	github.com/0magnet/websh v0.0.0-20260914105251-9f3f0b910116
 	github.com/0magnet/winbox-go v0.0.0-20260913215348-e6a682de3c9b // indirect
 	github.com/alecthomas/chroma/v2 v2.27.0 // indirect
 	github.com/aymanbagabas/go-osc52/v2 v2.0.1 // indirect
