@@ -607,3 +607,69 @@ func TestSyncClearsBeforeTheCellsAreWritten(t *testing.T) {
 		t.Errorf("after Sync the cell holds %q, want it repainted as %q", got, "a")
 	}
 }
+
+// The Screen has to satisfy tcell.Screen, and the interface grows: FillArea
+// arrived in tcell v3.5.0 and its absence was a build failure in every
+// dependent, not a missing feature. The assignment is the test — if the type
+// stops implementing the interface this file stops compiling.
+var _ tcell.Screen = (*Screen)(nil)
+
+func TestFillAreaFillsOnlyTheRegion(t *testing.T) {
+	s, _ := newTestScreen(t, 10, 6)
+
+	s.FillArea(2, 1, 3, 2, '#', tcell.StyleDefault)
+
+	for y := 0; y < 6; y++ {
+		for x := 0; x < 10; x++ {
+			got, _, _ := s.Get(x, y)
+			inside := x >= 2 && x < 5 && y >= 1 && y < 3
+			want := " "
+			if inside {
+				want = "#"
+			}
+			if got != want {
+				t.Errorf("cell (%d,%d) = %q, want %q", x, y, got, want)
+			}
+		}
+	}
+}
+
+// The CellBuffer clips, so a region reaching past the edge fills what is inside
+// it rather than panicking or wrapping onto the next row.
+func TestFillAreaClipsToTheScreen(t *testing.T) {
+	s, _ := newTestScreen(t, 4, 3)
+
+	s.FillArea(2, 2, 10, 10, '#', tcell.StyleDefault)
+	s.FillArea(-3, -3, 4, 4, '@', tcell.StyleDefault)
+
+	want := []string{
+		"@   ",
+		"    ",
+		"  ##",
+	}
+	for y := 0; y < 3; y++ {
+		for x := 0; x < 4; x++ {
+			got, _, _ := s.Get(x, y)
+			if w := string(want[y][x]); got != w {
+				t.Errorf("cell (%d,%d) = %q, want %q", x, y, got, w)
+			}
+		}
+	}
+}
+
+// A zero or negative extent fills nothing at all.
+func TestFillAreaWithNoExtentFillsNothing(t *testing.T) {
+	s, _ := newTestScreen(t, 4, 3)
+
+	s.FillArea(1, 1, 0, 5, '#', tcell.StyleDefault)
+	s.FillArea(1, 1, 5, 0, '#', tcell.StyleDefault)
+	s.FillArea(1, 1, -2, -2, '#', tcell.StyleDefault)
+
+	for y := 0; y < 3; y++ {
+		for x := 0; x < 4; x++ {
+			if got, _, _ := s.Get(x, y); got != " " {
+				t.Errorf("cell (%d,%d) = %q, want a blank", x, y, got)
+			}
+		}
+	}
+}
