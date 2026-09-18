@@ -34,12 +34,12 @@ github.com/0magnet/toilet-go v0.0.0-20260916100348-f098e493c9ae h1:DNVg6QVUCN/p3
 github.com/0magnet/toilet-go v0.0.0-20260916100348-f098e493c9ae/go.mod h1:TnF45LsHpJY3O74LuimkYPfQzXKylLmp6oPNUeUJyss=
 github.com/0magnet/u-root v0.16.1-0.20260814161052-156e0b67262b h1:1p4E2ok/rmNJU2LsGx6iMl0bIAMgl1QOC2H8doC+9ww=
 github.com/0magnet/u-root v0.16.1-0.20260814161052-156e0b67262b/go.mod h1:fId14v+rNp1A0ZKHJPZZyiu9dfgWKEs7nbyvKrku3bo=
-github.com/0magnet/websh v0.0.0-20260916100931-8694a72a6d94 h1:9qn2es8rsE84PjrD7nuE4gvDVX3VC65H3TfJzKUnBEg=
-github.com/0magnet/websh v0.0.0-20260916100931-8694a72a6d94/go.mod h1:JX/BsnB+yDHFNVlaFzOB2/GxYK/ExA7oT9LE5gyuwb8=
+github.com/0magnet/websh v0.0.0-20260918095400-01adea695972 h1:l//dajj8L0f6tHqkbKxGpWuCfMiykAwDf3MJ1lt2WN4=
+github.com/0magnet/websh v0.0.0-20260918095400-01adea695972/go.mod h1:3lS4e1DWfftTgaczoBw+2JVm+8VJdNA4Hrv4I6beKBM=
 github.com/0magnet/winbox-go v0.0.0-20260915183431-ca6572e4c323 h1:v9S+e+vX65JTsUoAvw/QBRaDuveNwV+fdW57qxj6yWI=
 github.com/0magnet/winbox-go v0.0.0-20260915183431-ca6572e4c323/go.mod h1:19+/rRQWd/tc9/8CFcUr6C+3AipeZmHyyda2tVombe4=
-github.com/0magnet/xterm-go v0.0.0-20260915170035-1ea079f51d60 h1:Joeo8EVcjvXUvPjMqraf7qu+ucd8Rl9RtEcyE+J/HjY=
-github.com/0magnet/xterm-go v0.0.0-20260915170035-1ea079f51d60/go.mod h1:W6c6ofSTsxXuQEr1rSZ3qmfOj5a3LGB3uLQBL0/TiKc=
+github.com/0magnet/xterm-go v0.0.0-20260918025541-d7185c9db583 h1:y+2JEOu+n2W8+W9kxyo+/Iu1HL9peKL1ljltAPyDWhY=
+github.com/0magnet/xterm-go v0.0.0-20260918025541-d7185c9db583/go.mod h1:W6c6ofSTsxXuQEr1rSZ3qmfOj5a3LGB3uLQBL0/TiKc=
 github.com/MarvinJWendt/testza v0.5.2 h1:53KDo64C1z/h/d/stCYCPY69bt/OSwjq5KpFNwi+zB4=
 github.com/MarvinJWendt/testza v0.5.2/go.mod h1:xu53QFE5sCdjtMCKk8YMQ2MnymimEctc4n3EjyIYvEY=
 github.com/alecthomas/assert/v2 v2.11.0 h1:2Q9r3ki8+JYXvGsDyBXwH3LcJ+WK5D0gc5E8vS6K3D0=
@@ -87,8 +87,8 @@ github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/dlclark/regexp2/v2 v2.8.0 h1:CekDhPLGfm+GAJmPVFIG+5dqMIQPkyHJll7BbdneDfw=
 github.com/dlclark/regexp2/v2 v2.8.0/go.mod h1:avUrQvPaLz2DrFNHJF0taWAFFX2C1GMSSoeiqFjcBmU=
-github.com/dustin/go-humanize v1.0.1 h1:GzkhY7T5VNhEkwH0PVJgjz+fX1rhBrR7pRT3mDkpeCY=
-github.com/dustin/go-humanize v1.0.1/go.mod h1:Mu1zIs6XwVuF/gI1OepvI0qD18qycQx+mFykh5fBlto=
+github.com/dustin/go-humanize v1.1.0 h1:dbKTrvD0klcbBV/h4AWJdMuZogJACoMlvWIWZ5b2xWg=
+github.com/dustin/go-humanize v1.1.0/go.mod h1:hc1CvRkJMsgxqjmjMQF3QNRAZBwY8AXBAzKYoSX9sFI=
 github.com/gdamore/encoding v1.0.1 h1:YzKZckdBL6jVt2Gc+5p82qhrGiqMdG/eNs6Wy0u3Uhw=
 github.com/gdamore/encoding v1.0.1/go.mod h1:0Z0cMFinngz9kS1QfMjCP8TY7em3bZYeeklsSDPivEo=
 github.com/gdamore/tcell/v2 v2.13.10 h1:Afs3JKt83HnhuUKdZ3MnxUgOqQRWftj5JyDqv1LLynA=
