@@ -16,8 +16,10 @@ import (
 // which is most of them, works as it does in a real terminal.
 //
 // Unlike the keyboard, the pointer is spatial: the listeners live on this
-// screen's own element, so there is no claim to arbitrate — an event that
-// lands here is ours.
+// screen's own element, so there is no claim to arbitrate between screens —
+// an event that lands here is ours. There is still one to make against the
+// terminal underneath, which would otherwise read the same press as the start
+// of a text selection; see claimMouse.
 
 // buttonsMask maps the DOM MouseEvent.buttons bitmask onto tcell's.
 func buttonsMask(b int) tcell.ButtonMask {
@@ -69,11 +71,26 @@ func mouseMods(ev js.Value) tcell.ModMask {
 	return mod
 }
 
+// gridRect is the box the cells are actually drawn in.
+//
+// Not the mount element: xterm-go lays the grid out inside it beside a
+// scrollbar, so the element is the wider of the two by whatever the scrollbar
+// takes. Dividing by the element's width stretches every column slightly and
+// the error accumulates rightward along the row — at the right-hand edge of a
+// 270-column terminal it names a cell two to the left of the one under the
+// pointer, which is enough to miss a link.
+func (s *Screen) gridRect() js.Value {
+	if screen := s.el.Call("querySelector", ".xterm-screen"); screen.Truthy() {
+		return screen.Call("getBoundingClientRect")
+	}
+	return s.el.Call("getBoundingClientRect")
+}
+
 // cellAt turns an event's client coordinates into a cell position. The
 // terminal is a uniform grid filling its element, so the division is the
 // geometry; the emulator's own font metrics never need to be asked.
 func (s *Screen) cellAt(ev js.Value) (int, int) {
-	rect := s.el.Call("getBoundingClientRect")
+	rect := s.gridRect()
 	relX := ev.Get("clientX").Float() - rect.Get("left").Float()
 	relY := ev.Get("clientY").Float() - rect.Get("top").Float()
 	w, h := rect.Get("width").Float(), rect.Get("height").Float()
@@ -160,7 +177,41 @@ func (s *Screen) detachMouse() {
 // EnableMouse turns on mouse reporting: button presses, releases and the
 // wheel. Motion reporting is not implemented, so MouseMotionEvents (and
 // drag tracking) are quietly less than a real terminal offers.
-func (s *Screen) EnableMouse(...tcell.MouseFlags) { s.mouseOn = true }
+func (s *Screen) EnableMouse(...tcell.MouseFlags) {
+	s.mouseOn = true
+	s.claimMouse(true)
+}
 
 // DisableMouse stops mouse reporting.
-func (s *Screen) DisableMouse() { s.mouseOn = false }
+func (s *Screen) DisableMouse() {
+	s.mouseOn = false
+	s.claimMouse(false)
+}
+
+// mouseClaimer is a terminal that can be told an application has taken the
+// pointer. Optional, because the fake terminal in the tests is not one.
+type mouseClaimer interface{ ClaimMouse(bool) }
+
+// claimMouse tells the terminal that the pointer belongs to the application
+// while this screen has the mouse enabled.
+//
+// The listeners above run in the capture phase, so the tcell event is posted
+// either way — but the terminal's own handlers still run afterwards on the
+// same click, and an emulator with no application asking for the mouse treats
+// a press as the start of a text selection. The result was that every click on
+// a link also smeared a selection across the screen, and it stayed there.
+//
+// Saying so through the core mouse service rather than swallowing the event is
+// what makes shift-to-select keep working: xterm-go already yields the pointer
+// to an application that has asked for it and takes it back for a shifted
+// click, which is the convention every terminal emulator uses for exactly this
+// conflict. It also stops the wheel scrolling the emulator's scrollback out
+// from under a full-screen TUI.
+//
+// The reports the terminal now encodes go nowhere: bindInput has already
+// replaced OnData for as long as this screen is running.
+func (s *Screen) claimMouse(on bool) {
+	if c, ok := s.term.(mouseClaimer); ok {
+		c.ClaimMouse(on)
+	}
+}
