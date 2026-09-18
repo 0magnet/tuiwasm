@@ -214,10 +214,21 @@ func (s *Screen) Init() error {
 		s.rows = 24
 	}
 	s.cells.Resize(s.cols, s.rows)
+	// Onto the alternate screen, which is what a full-screen program does
+	// and what tcell's own terminal screen does with the same sequence.
+	//
+	// It is not decoration. Without it the program draws over the shell it
+	// was started from and, on the way out, leaves its last frame standing
+	// there with the prompt continuing underneath — the scrollback gone and
+	// a dead copy of the interface in its place. The alt buffer is a second
+	// screen: the program has it to itself, and leaving it puts back what
+	// was underneath, exactly as quitting an editor does.
+	s.buf = append(s.buf, enterAltScreen...)
 	// Start from a terminal that is actually blank. A fresh CellBuffer reports
 	// nothing dirty — every cell's last and current contents are both the empty
 	// string — so without this the first frame would draw over whatever the
-	// terminal happened to be showing.
+	// terminal happened to be showing. The alt buffer arrives blank, but a
+	// terminal too old to have one does not, and this costs a clear either way.
 	s.buf = append(s.buf, clearScreenSeq(-1, -1)...)
 	s.haveStyle, s.penValid = false, false
 	s.flushLocked()
@@ -273,8 +284,10 @@ func (s *Screen) Fini() {
 
 		s.mu.Lock()
 		// Leave the terminal in a state someone else can use: cursor back,
-		// styling reset.
+		// styling reset, and off the alternate screen — which is what puts
+		// the shell's scrollback back in place of this program's last frame.
 		s.buf = append(s.buf, "\x1b[0m\x1b[?25h"...)
+		s.buf = append(s.buf, leaveAltScreen...)
 		s.haveStyle, s.penValid = false, false
 		s.flushLocked()
 		s.mu.Unlock()
