@@ -673,3 +673,56 @@ func TestFillAreaWithNoExtentFillsNothing(t *testing.T) {
 		}
 	}
 }
+
+// ---- mouse flags ----
+
+// EnableMouse with no flags means every kind of event, as it does for
+// tcell's own screens — so a program that simply enables the mouse gets
+// motion, the way it would in a terminal.
+func TestEnableMouseDefaultsToEveryEvent(t *testing.T) {
+	s, _ := newTestScreen(t, 20, 5)
+	s.EnableMouse()
+	for _, f := range []tcell.MouseFlags{
+		tcell.MouseButtonEvents, tcell.MouseDragEvents, tcell.MouseMotionEvents,
+	} {
+		if s.mouseFlags&f == 0 {
+			t.Errorf("EnableMouse() left flag %d off", f)
+		}
+	}
+}
+
+func TestEnableMouseKeepsTheFlagsItIsGiven(t *testing.T) {
+	s, _ := newTestScreen(t, 20, 5)
+	s.EnableMouse(tcell.MouseButtonEvents)
+	if s.mouseFlags != tcell.MouseButtonEvents {
+		t.Errorf("flags %d, want %d", s.mouseFlags, tcell.MouseButtonEvents)
+	}
+	s.EnableMouse(tcell.MouseButtonEvents, tcell.MouseDragEvents)
+	if want := tcell.MouseButtonEvents | tcell.MouseDragEvents; s.mouseFlags != want {
+		t.Errorf("flags %d, want %d", s.mouseFlags, want)
+	}
+}
+
+// tcell's flags nest: motion includes drag, and a screen asked only for
+// button events reports neither.
+func TestReportsMotionFollowsTcellsNesting(t *testing.T) {
+	const held = tcell.ButtonPrimary
+	for _, c := range []struct {
+		name  string
+		flags tcell.MouseFlags
+		btns  tcell.ButtonMask
+		want  bool
+	}{
+		{"buttons only, bare move", tcell.MouseButtonEvents, tcell.ButtonNone, false},
+		{"buttons only, drag", tcell.MouseButtonEvents, held, false},
+		{"drag, bare move", tcell.MouseDragEvents, tcell.ButtonNone, false},
+		{"drag, drag", tcell.MouseDragEvents, held, true},
+		{"motion, bare move", tcell.MouseMotionEvents, tcell.ButtonNone, true},
+		{"motion includes drag", tcell.MouseMotionEvents, held, true},
+		{"nothing enabled", 0, tcell.ButtonNone, false},
+	} {
+		if got := reportsMotion(c.flags, c.btns); got != c.want {
+			t.Errorf("%s: %v, want %v", c.name, got, c.want)
+		}
+	}
+}

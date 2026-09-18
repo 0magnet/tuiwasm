@@ -11,9 +11,8 @@ import (
 // Mouse reporting. Pointer events on the terminal's element become tcell
 // mouse events: button presses and releases (the release is the event
 // whose buttons no longer include the one that went down, exactly as
-// tcell reports it) and wheel motion. Motion reporting — MouseMotionEvents,
-// drag tracking — is not implemented; a TUI that only clicks and scrolls,
-// which is most of them, works as it does in a real terminal.
+// tcell reports it), wheel motion, and — where the EnableMouse flags ask
+// for them — drag and bare motion, one event per cell the pointer enters.
 //
 // Unlike the keyboard, the pointer is spatial: the listeners live on this
 // screen's own element, so there is no claim to arbitrate between screens —
@@ -52,6 +51,20 @@ func wheelMask(dx, dy float64) tcell.ButtonMask {
 		m |= tcell.WheelRight
 	}
 	return m
+}
+
+// reportsMotion reports whether a pointer move with these buttons held is
+// one the flags in force ask for.
+//
+// tcell's flags nest rather than partition — MouseMotionEvents is
+// documented as "all mouse events (includes click and drag events)" — so a
+// drag is reported under either of the two, and a bare move only under
+// motion.
+func reportsMotion(flags tcell.MouseFlags, btns tcell.ButtonMask) bool {
+	if btns != tcell.ButtonNone {
+		return flags&(tcell.MouseDragEvents|tcell.MouseMotionEvents) != 0
+	}
+	return flags&tcell.MouseMotionEvents != 0
 }
 
 func mouseMods(ev js.Value) tcell.ModMask {
@@ -126,17 +139,57 @@ func (s *Screen) bindMouse(el js.Value) {
 		// textarea to find or not; the pointer has only the element.
 		return
 	}
-	button := func(_ js.Value, a []js.Value) any {
+	button := func(a []js.Value) {
+		if len(a) == 0 || !s.mouseOn {
+			return
+		}
+		ev := a[0]
+		x, y := s.cellAt(ev)
+		s.lastCellX, s.lastCellY = x, y
+		s.post(tcell.NewEventMouse(x, y, buttonsMask(ev.Get("buttons").Int()), mouseMods(ev)))
+	}
+	s.mdown = js.FuncOf(func(_ js.Value, a []js.Value) any {
+		// A press with the pointer claimed is the one that would have
+		// replaced any standing selection had the terminal been handling
+		// it. Since it is not, drop the selection here — otherwise text
+		// taken with shift stays painted over the application and no
+		// click can dismiss it. The terminal keeps xterm.js's own rule
+		// (it does not clear one there either); claiming the pointer is
+		// this package's decision, so the consequence is too.
+		if s.mouseOn && len(a) > 0 && !a[0].Get("shiftKey").Bool() {
+			if h, ok := s.term.(mouseHost); ok {
+				h.ClearSelection()
+			}
+		}
+		button(a)
+		return nil
+	})
+	s.mup = js.FuncOf(func(_ js.Value, a []js.Value) any {
+		button(a)
+		return nil
+	})
+	s.mmove = js.FuncOf(func(_ js.Value, a []js.Value) any {
 		if len(a) == 0 || !s.mouseOn {
 			return nil
 		}
 		ev := a[0]
+		btns := buttonsMask(ev.Get("buttons").Int())
+		if !reportsMotion(s.mouseFlags, btns) {
+			return nil
+		}
 		x, y := s.cellAt(ev)
-		s.post(tcell.NewEventMouse(x, y, buttonsMask(ev.Get("buttons").Int()), mouseMods(ev)))
+		// One event per cell entered, not per pixel traveled. A TUI
+		// redraws on every event it is handed, and a pointer crossing a
+		// terminal generates hundreds of moves within a single cell; at
+		// that rate the queue (which drops when full) would throw away
+		// the clicks among them.
+		if x == s.lastCellX && y == s.lastCellY {
+			return nil
+		}
+		s.lastCellX, s.lastCellY = x, y
+		s.post(tcell.NewEventMouse(x, y, btns, mouseMods(ev)))
 		return nil
-	}
-	s.mdown = js.FuncOf(button)
-	s.mup = js.FuncOf(button)
+	})
 	s.mwheel = js.FuncOf(func(_ js.Value, a []js.Value) any {
 		if len(a) == 0 || !s.mouseOn {
 			return nil
@@ -154,6 +207,7 @@ func (s *Screen) bindMouse(el js.Value) {
 	})
 	el.Call("addEventListener", "mousedown", s.mdown, true)
 	el.Call("addEventListener", "mouseup", s.mup, true)
+	el.Call("addEventListener", "mousemove", s.mmove, true)
 	// passive:false, or preventDefault is ignored for wheel events.
 	el.Call("addEventListener", "wheel", s.mwheel, map[string]any{"passive": false, "capture": true})
 }
@@ -165,7 +219,7 @@ func (s *Screen) detachMouse() {
 	for _, h := range []struct {
 		name string
 		fn   *js.Func
-	}{{"mousedown", &s.mdown}, {"mouseup", &s.mup}, {"wheel", &s.mwheel}} {
+	}{{"mousedown", &s.mdown}, {"mouseup", &s.mup}, {"mousemove", &s.mmove}, {"wheel", &s.mwheel}} {
 		if h.fn.Truthy() {
 			s.el.Call("removeEventListener", h.name, *h.fn, true)
 			h.fn.Release()
@@ -174,10 +228,21 @@ func (s *Screen) detachMouse() {
 	}
 }
 
-// EnableMouse turns on mouse reporting: button presses, releases and the
-// wheel. Motion reporting is not implemented, so MouseMotionEvents (and
-// drag tracking) are quietly less than a real terminal offers.
-func (s *Screen) EnableMouse(...tcell.MouseFlags) {
+// EnableMouse turns on mouse reporting: button presses and releases, the
+// wheel, and — per the flags — drag and motion.
+//
+// The flags mean what they mean to tcell's own screens, no flags included:
+// that is every kind of event, so a program that just calls EnableMouse()
+// gets motion, as it would in a terminal.
+func (s *Screen) EnableMouse(flags ...tcell.MouseFlags) {
+	var f tcell.MouseFlags
+	for _, flag := range flags {
+		f |= flag
+	}
+	if f == 0 {
+		f = tcell.MouseMotionEvents | tcell.MouseDragEvents | tcell.MouseButtonEvents
+	}
+	s.mouseFlags = f
 	s.mouseOn = true
 	s.claimMouse(true)
 }
@@ -188,9 +253,14 @@ func (s *Screen) DisableMouse() {
 	s.claimMouse(false)
 }
 
-// mouseClaimer is a terminal that can be told an application has taken the
-// pointer. Optional, because the fake terminal in the tests is not one.
-type mouseClaimer interface{ ClaimMouse(bool) }
+// mouseHost is a terminal this screen can take the pointer from: told that
+// an application has it, and told to drop a selection the application's
+// click has displaced. Optional, because the fake terminal in the tests is
+// neither.
+type mouseHost interface {
+	ClaimMouse(bool)
+	ClearSelection()
+}
 
 // claimMouse tells the terminal that the pointer belongs to the application
 // while this screen has the mouse enabled.
@@ -211,7 +281,7 @@ type mouseClaimer interface{ ClaimMouse(bool) }
 // The reports the terminal now encodes go nowhere: bindInput has already
 // replaced OnData for as long as this screen is running.
 func (s *Screen) claimMouse(on bool) {
-	if c, ok := s.term.(mouseClaimer); ok {
-		c.ClaimMouse(on)
+	if h, ok := s.term.(mouseHost); ok {
+		h.ClaimMouse(on)
 	}
 }

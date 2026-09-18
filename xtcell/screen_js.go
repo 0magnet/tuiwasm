@@ -58,6 +58,9 @@ func (x *xtermTerm) ClaimMouse(on bool) {
 	x.t.Core.MouseService().SetActiveProtocol(p)
 }
 
+// ClearSelection drops the terminal's text selection.
+func (x *xtermTerm) ClearSelection() { x.t.ClearSelection() }
+
 // current is the screen holding the keyboard focus.
 //
 // It no longer decides who may draw. That used to be the whole of this
@@ -150,8 +153,12 @@ type Screen struct {
 	savedData func(string)
 
 	// Mouse reporting; see mouse_js.go.
-	mouseOn            bool
-	mdown, mup, mwheel js.Func
+	mouseOn                   bool
+	mouseFlags                tcell.MouseFlags
+	mdown, mup, mmove, mwheel js.Func
+	// The cell the pointer was last reported over, so motion is reported
+	// once per cell crossed rather than once per pixel.
+	lastCellX, lastCellY int
 
 	// sink is set when the terminal will take cells directly. See direct_js.go.
 	sink cellSink
