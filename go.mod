@@ -4,14 +4,14 @@ go 1.26.5
 
 require (
 	github.com/0magnet/calvin v0.0.0-20260915170035-09af7075474e
-	github.com/0magnet/desk v0.0.0-20260923150657-2a7f55804f01
-	github.com/0magnet/desk/panes v0.0.0-20260923150657-2a7f55804f01
+	github.com/0magnet/desk v0.0.0-20260927163817-533c8cb313fe
+	github.com/0magnet/desk/panes v0.0.0-20260927163817-533c8cb313fe
 	github.com/0magnet/glamour v1.0.1-0.20260828223301-bc6921785a82
-	github.com/0magnet/lolcat-go v0.0.0-20260915170035-670d5873f4bb
+	github.com/0magnet/lolcat-go v0.0.0-20260915170035-9435f1eb43a8
 	github.com/0magnet/proxima5 v0.0.0-20260914191450-f19cf6c054fc
 	github.com/0magnet/proxima5/v2 v2.0.0-20260902091202-e45c029b343b
 	github.com/0magnet/termanim v0.0.0-20260916100333-d501f348ee17
-	github.com/0magnet/toilet-go v0.0.0-20260916100348-f098e493c9ae
+	github.com/0magnet/toilet-go v0.0.0-20260916100348-fb9402875c45
 	github.com/0magnet/xterm-go v0.0.0-20260923132223-00c1a8e687cc
 	github.com/charmbracelet/lipgloss v1.1.1-0.20250404203927-76690c660834
 	github.com/gdamore/tcell/v2 v2.13.10
@@ -26,7 +26,7 @@ require (
 require (
 	charm.land/lipgloss/v2 v2.0.6 // indirect
 	github.com/0magnet/img2txt-go v0.0.0-20260915170035-ea9710543da0 // indirect
-	github.com/charmbracelet/ultraviolet v0.0.0-20260922123528-4e49372c11f9 // indirect
+	github.com/charmbracelet/ultraviolet v0.0.0-20260928045949-bbf040aedf25 // indirect
 	github.com/charmbracelet/x/termios v0.1.1 // indirect
 	github.com/charmbracelet/x/windows v0.2.2 // indirect
 	github.com/muesli/cancelreader v0.2.2 // indirect
