@@ -53,8 +53,8 @@ github.com/0magnet/proxima5/internal/views
 # github.com/0magnet/proxima5/v2 v2.0.0-20260902091202-e45c029b343b
 ## explicit; go 1.25.0
 github.com/0magnet/proxima5/v2
-# github.com/0magnet/sh/v3 v3.13.2-0.20260818190530-13d0024da85c
-## explicit; go 1.25.0
+# github.com/0magnet/sh/v3 v3.13.2-0.20260928172341-4c52a7abff02
+## explicit; go 1.26.0
 github.com/0magnet/sh/v3/expand
 github.com/0magnet/sh/v3/fileutil
 github.com/0magnet/sh/v3/internal
@@ -109,7 +109,7 @@ github.com/0magnet/toilet-go/toilet
 # github.com/0magnet/u-root v0.16.1-0.20260814161052-156e0b67262b
 ## explicit; go 1.25.7
 github.com/0magnet/u-root/pkg/ls
-# github.com/0magnet/websh v0.0.0-20260924101532-76422c7ff9c3
+# github.com/0magnet/websh v0.0.0-20260928172902-22c6f782792e
 ## explicit; go 1.26.0
 github.com/0magnet/websh/shell
 github.com/0magnet/websh/web
@@ -146,7 +146,7 @@ github.com/charmbracelet/colorprofile
 # github.com/charmbracelet/lipgloss v1.1.1-0.20250404203927-76690c660834
 ## explicit; go 1.18
 github.com/charmbracelet/lipgloss
-# github.com/charmbracelet/ultraviolet v0.0.0-20260928045949-bbf040aedf25
+# github.com/charmbracelet/ultraviolet v0.0.0-20260929091141-666ce5eec9fc
 ## explicit; go 1.26.0
 github.com/charmbracelet/ultraviolet
 # github.com/charmbracelet/x/ansi v0.11.8
