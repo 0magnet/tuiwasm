@@ -12,7 +12,7 @@ require (
 	github.com/0magnet/proxima5/v2 v2.0.0-20260902091202-e45c029b343b
 	github.com/0magnet/termanim v0.0.0-20260916100333-d501f348ee17
 	github.com/0magnet/toilet-go v0.0.0-20260916100348-fb9402875c45
-	github.com/0magnet/xterm-go v0.0.0-20260923132223-00c1a8e687cc
+	github.com/0magnet/xterm-go v0.0.0-20260930222525-d3033e9b370a
 	github.com/charmbracelet/lipgloss v1.1.1-0.20250404203927-76690c660834
 	github.com/gdamore/tcell/v2 v2.13.10
 	github.com/guptarohit/asciigraph v0.10.0
@@ -26,7 +26,7 @@ require (
 require (
 	charm.land/lipgloss/v2 v2.0.6 // indirect
 	github.com/0magnet/img2txt-go v0.0.0-20260915170035-ea9710543da0 // indirect
-	github.com/charmbracelet/ultraviolet v0.0.0-20260929091141-666ce5eec9fc // indirect
+	github.com/charmbracelet/ultraviolet v0.0.0-20260930135840-270558f35f71 // indirect
 	github.com/charmbracelet/x/termios v0.1.1 // indirect
 	github.com/charmbracelet/x/windows v0.2.2 // indirect
 	github.com/muesli/cancelreader v0.2.2 // indirect
@@ -41,7 +41,7 @@ require (
 	github.com/0magnet/afero v1.15.1-0.20260816202415-9f9d46a34dcd // indirect
 	github.com/0magnet/sh/v3 v3.13.2-0.20260928172341-4c52a7abff02
 	github.com/0magnet/u-root v0.16.1-0.20260814161052-156e0b67262b // indirect
-	github.com/0magnet/websh v0.0.0-20260928172902-22c6f782792e
+	github.com/0magnet/websh v0.0.0-20261001114507-ccf76b5415bd
 	github.com/0magnet/winbox-go v0.0.0-20260915183431-ca6572e4c323 // indirect
 	github.com/alecthomas/chroma/v2 v2.27.0 // indirect
 	github.com/aymanbagabas/go-osc52/v2 v2.0.1 // indirect
@@ -54,14 +54,14 @@ require (
 	github.com/clipperhouse/displaywidth v0.11.0 // indirect
 	github.com/clipperhouse/uax29/v2 v2.7.0 // indirect
 	github.com/containerd/console v1.0.5 // indirect
-	github.com/dlclark/regexp2/v2 v2.8.0 // indirect
+	github.com/dlclark/regexp2/v2 v2.8.1 // indirect
 	github.com/dustin/go-humanize v1.1.0 // indirect
 	github.com/gdamore/encoding v1.0.1 // indirect
 	github.com/gdamore/tcell/v3 v3.5.0
 	github.com/gookit/color v1.6.1 // indirect
 	github.com/inconshreveable/mousetrap v1.1.0 // indirect
 	github.com/itchyny/gojq v0.12.19 // indirect
-	github.com/itchyny/timefmt-go v0.1.8 // indirect
+	github.com/itchyny/timefmt-go v0.1.9 // indirect
 	github.com/lithammer/fuzzysearch v1.1.8 // indirect
 	github.com/lucasb-eyer/go-colorful v1.4.1 // indirect
 	github.com/mattn/go-isatty v0.0.24 // indirect
