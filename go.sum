@@ -34,8 +34,8 @@ github.com/0magnet/toilet-go v0.0.0-20260916100348-fb9402875c45 h1:VESM8Lbq0IMG9
 github.com/0magnet/toilet-go v0.0.0-20260916100348-fb9402875c45/go.mod h1:TnF45LsHpJY3O74LuimkYPfQzXKylLmp6oPNUeUJyss=
 github.com/0magnet/u-root v0.16.1-0.20260814161052-156e0b67262b h1:1p4E2ok/rmNJU2LsGx6iMl0bIAMgl1QOC2H8doC+9ww=
 github.com/0magnet/u-root v0.16.1-0.20260814161052-156e0b67262b/go.mod h1:fId14v+rNp1A0ZKHJPZZyiu9dfgWKEs7nbyvKrku3bo=
-github.com/0magnet/websh v0.0.0-20261001114507-ccf76b5415bd h1:QHtEVA5tnc9BiNJ+LRAzrYboj2aovy4B5BPvESeVRrs=
-github.com/0magnet/websh v0.0.0-20261001114507-ccf76b5415bd/go.mod h1:recqVuEnBWb810P/+Br+ucGyaJl7qYFfJyPylgeiqZ4=
+github.com/0magnet/websh v0.0.0-20261001114753-0401a7704ac9 h1:GfcK4Fji+Yr3gCNAj0lWmww/OXXD8pvAGaXVWN2hhMs=
+github.com/0magnet/websh v0.0.0-20261001114753-0401a7704ac9/go.mod h1:recqVuEnBWb810P/+Br+ucGyaJl7qYFfJyPylgeiqZ4=
 github.com/0magnet/winbox-go v0.0.0-20260915183431-ca6572e4c323 h1:v9S+e+vX65JTsUoAvw/QBRaDuveNwV+fdW57qxj6yWI=
 github.com/0magnet/winbox-go v0.0.0-20260915183431-ca6572e4c323/go.mod h1:19+/rRQWd/tc9/8CFcUr6C+3AipeZmHyyda2tVombe4=
 github.com/0magnet/xterm-go v0.0.0-20260930222525-d3033e9b370a h1:0vZOcOJSwaX7QPrKl+4J17gBxbSks3NJxcqPTzqP3yM=
@@ -58,8 +58,8 @@ github.com/charmbracelet/colorprofile v0.4.3 h1:QPa1IWkYI+AOB+fE+mg/5/4HRMZcaXex
 github.com/charmbracelet/colorprofile v0.4.3/go.mod h1:/zT4BhpD5aGFpqQQqw7a+VtHCzu+zrQtt1zhMt9mR4Q=
 github.com/charmbracelet/lipgloss v1.1.1-0.20250404203927-76690c660834 h1:ZR7e0ro+SZZiIZD7msJyA+NjkCNNavuiPBLgerbOziE=
 github.com/charmbracelet/lipgloss v1.1.1-0.20250404203927-76690c660834/go.mod h1:aKC/t2arECF6rNOnaKaVU6y4t4ZeHQzqfxedE/VkVhA=
-github.com/charmbracelet/ultraviolet v0.0.0-20260930135840-270558f35f71 h1:DMlIR5G/XKGv8W5rJwivfVRuWbMsycFtuNKYhTlq+s4=
-github.com/charmbracelet/ultraviolet v0.0.0-20260930135840-270558f35f71/go.mod h1:D9SVXVpAsD1pP6xR6BiERbe4+dUU6EW9US1TFrNutGA=
+github.com/charmbracelet/ultraviolet v0.0.0-20261001125412-878653296cfd h1:W0HOPGkwRaAmV20plE/f+Rk6Xn+IdR8G0qHsGXcOnF8=
+github.com/charmbracelet/ultraviolet v0.0.0-20261001125412-878653296cfd/go.mod h1:D9SVXVpAsD1pP6xR6BiERbe4+dUU6EW9US1TFrNutGA=
 github.com/charmbracelet/x/ansi v0.11.8 h1:JMFwp0CgDC2+jcOB162HH5k7I3FVbgFSMMYg7dSPBQQ=
 github.com/charmbracelet/x/ansi v0.11.8/go.mod h1:ZNN+3mXny/516oTQPLMPIBeSINvNJJQ8uQXDgbeJxY0=
 github.com/charmbracelet/x/cellbuf v0.0.15 h1:ur3pZy0o6z/R7EylET877CBxaiE1Sp1GMxoFPAIztPI=

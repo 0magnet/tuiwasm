@@ -109,7 +109,7 @@ github.com/0magnet/toilet-go/toilet
 # github.com/0magnet/u-root v0.16.1-0.20260814161052-156e0b67262b
 ## explicit; go 1.25.7
 github.com/0magnet/u-root/pkg/ls
-# github.com/0magnet/websh v0.0.0-20261001114507-ccf76b5415bd
+# github.com/0magnet/websh v0.0.0-20261001114753-0401a7704ac9
 ## explicit; go 1.26.0
 github.com/0magnet/websh/shell
 github.com/0magnet/websh/web
@@ -146,7 +146,7 @@ github.com/charmbracelet/colorprofile
 # github.com/charmbracelet/lipgloss v1.1.1-0.20250404203927-76690c660834
 ## explicit; go 1.18
 github.com/charmbracelet/lipgloss
-# github.com/charmbracelet/ultraviolet v0.0.0-20260930135840-270558f35f71
+# github.com/charmbracelet/ultraviolet v0.0.0-20261001125412-878653296cfd
 ## explicit; go 1.26.0
 github.com/charmbracelet/ultraviolet
 # github.com/charmbracelet/x/ansi v0.11.8
