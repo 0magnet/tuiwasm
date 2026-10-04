@@ -285,6 +285,14 @@ for anything else does not carry the wasm.
 The server serves what Pages serves, the way Pages serves it: same layout,
 and gzip on the wasm, so a local try is not several times heavier than the
 real thing. `--no-gzip` turns that off to see the uncompressed cost.
+
+## Related projects
+
+Other web terminals that a TUI in the browser could render to:
+
+- [ghostty-web](https://github.com/coder/ghostty-web) — Ghostty's terminal emulation in WebAssembly with an xterm.js-compatible API
+- [wterm](https://wterm.dev/) — a DOM-rendered web terminal
+
 ## Dependency Graph
 
 Made with [goda](https://github.com/loov/goda):
