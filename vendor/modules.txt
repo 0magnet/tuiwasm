@@ -22,11 +22,11 @@ github.com/0magnet/afero/mem
 ## explicit; go 1.26.0
 github.com/0magnet/calvin
 github.com/0magnet/calvin/clihelp
-# github.com/0magnet/desk v0.0.0
+# github.com/0magnet/desk v0.0.1-0.20261004200012-7ac6a12489c1
 ## explicit; go 1.26
 github.com/0magnet/desk
 github.com/0magnet/desk/dom
-# github.com/0magnet/desk/panes v0.0.0
+# github.com/0magnet/desk/panes v0.0.1-0.20261004200012-7ac6a12489c1
 ## explicit; go 1.26.6
 github.com/0magnet/desk/panes/files
 github.com/0magnet/desk/panes/hostauth
@@ -34,8 +34,8 @@ github.com/0magnet/desk/panes/hostfs
 github.com/0magnet/desk/panes/hostproto
 github.com/0magnet/desk/panes/term
 github.com/0magnet/desk/panes/viewer
-# github.com/0magnet/glamour v1.0.1-0.20260828223301-bc6921785a82
-## explicit; go 1.25.8
+# github.com/0magnet/glamour v1.0.1-0.20261004193946-db176df590f5
+## explicit; go 1.26.7
 github.com/0magnet/glamour
 github.com/0magnet/glamour/ansi
 github.com/0magnet/glamour/internal/autolink
@@ -54,7 +54,7 @@ github.com/0magnet/proxima5/internal/views
 # github.com/0magnet/proxima5/v2 v2.0.0-20260902091202-e45c029b343b
 ## explicit; go 1.25.0
 github.com/0magnet/proxima5/v2
-# github.com/0magnet/sh/v3 v3.13.2-0.20261003215414-58d567267b7a
+# github.com/0magnet/sh/v3 v3.13.2-0.20261004194540-aa2d6e4a31a5
 ## explicit; go 1.26.0
 github.com/0magnet/sh/v3/expand
 github.com/0magnet/sh/v3/fileutil
@@ -63,7 +63,7 @@ github.com/0magnet/sh/v3/internal/arithm
 github.com/0magnet/sh/v3/interp
 github.com/0magnet/sh/v3/pattern
 github.com/0magnet/sh/v3/syntax
-# github.com/0magnet/termanim v0.0.0
+# github.com/0magnet/termanim v0.0.1-0.20261004021059-29f9a64aa72a
 ## explicit; go 1.26.0
 github.com/0magnet/termanim/aquarium
 github.com/0magnet/termanim/atom
@@ -111,7 +111,7 @@ github.com/0magnet/toilet-go/toilet
 # github.com/0magnet/u-root v0.16.1-0.20261003214924-44e47b732754
 ## explicit; go 1.26.6
 github.com/0magnet/u-root/pkg/ls
-# github.com/0magnet/websh v0.0.1-0.20261004111413-c7475d2d8608
+# github.com/0magnet/websh v0.0.1-0.20261004200501-753c425a8b80
 ## explicit; go 1.26.6
 github.com/0magnet/websh/shell
 github.com/0magnet/websh/shell/sed

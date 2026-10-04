@@ -1,16 +1,16 @@
 module github.com/0magnet/tuiwasm
 
-go 1.26.6
+go 1.26.7
 
 require (
 	github.com/0magnet/calvin v0.0.0
-	github.com/0magnet/desk v0.0.0
-	github.com/0magnet/desk/panes v0.0.0
-	github.com/0magnet/glamour v1.0.1-0.20260828223301-bc6921785a82
+	github.com/0magnet/desk v0.0.1-0.20261004200012-7ac6a12489c1
+	github.com/0magnet/desk/panes v0.0.1-0.20261004200012-7ac6a12489c1
+	github.com/0magnet/glamour v1.0.1-0.20261004193946-db176df590f5
 	github.com/0magnet/lolcat-go v0.0.0
 	github.com/0magnet/proxima5 v0.0.0-20260914191450-f19cf6c054fc
 	github.com/0magnet/proxima5/v2 v2.0.0-20260902091202-e45c029b343b
-	github.com/0magnet/termanim v0.0.0
+	github.com/0magnet/termanim v0.0.1-0.20261004021059-29f9a64aa72a
 	github.com/0magnet/toilet-go v0.0.0-20261004111052-d4676898059a
 	github.com/0magnet/xterm-go v0.0.1-0.20261004020305-36b45f096b30
 	github.com/charmbracelet/lipgloss v1.1.1-0.20250404203927-76690c660834
@@ -39,9 +39,9 @@ require (
 	atomicgo.dev/keyboard v0.2.10 // indirect
 	atomicgo.dev/schedule v0.1.0 // indirect
 	github.com/0magnet/afero v1.15.1-0.20261003211811-482680d00992 // indirect
-	github.com/0magnet/sh/v3 v3.13.2-0.20261003215414-58d567267b7a
+	github.com/0magnet/sh/v3 v3.13.2-0.20261004194540-aa2d6e4a31a5
 	github.com/0magnet/u-root v0.16.1-0.20261003214924-44e47b732754 // indirect
-	github.com/0magnet/websh v0.0.1-0.20261004111413-c7475d2d8608
+	github.com/0magnet/websh v0.0.1-0.20261004200501-753c425a8b80
 	github.com/0magnet/winbox-go v0.0.0 // indirect
 	github.com/alecthomas/chroma/v2 v2.27.0 // indirect
 	github.com/aymanbagabas/go-osc52/v2 v2.0.1 // indirect

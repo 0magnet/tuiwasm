@@ -54,7 +54,7 @@ func buildIndex() demoIndex {
 	ix.Desc = fmt.Sprintf("Every one of the %d terminal demos and animations tuiwasm runs in a browser tab — "+
 		"Conway's Life, Langton's ant, boids, a Julia set, reaction-diffusion, matrix rain, "+
 		"plasma, fire and the rest — each one a link that opens it running.", ix.Count)
-	ix.CSS = htmpl.CSS(indexCSS)
+	ix.CSS = htmpl.CSS(indexCSS) //nolint:gosec // indexCSS is a compile-time constant
 	return ix
 }
 
