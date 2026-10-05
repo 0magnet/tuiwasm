@@ -22,7 +22,7 @@ github.com/0magnet/afero/mem
 ## explicit; go 1.26.0
 github.com/0magnet/calvin
 github.com/0magnet/calvin/clihelp
-# github.com/0magnet/desk v0.0.1-0.20261004200012-7ac6a12489c1
+# github.com/0magnet/desk v0.0.2
 ## explicit; go 1.26
 github.com/0magnet/desk
 github.com/0magnet/desk/dom
@@ -102,7 +102,7 @@ github.com/0magnet/termanim/snow
 github.com/0magnet/termanim/starfield
 github.com/0magnet/termanim/tunnel
 github.com/0magnet/termanim/wolfram
-# github.com/0magnet/toilet-go v0.0.0-20261004111052-d4676898059a
+# github.com/0magnet/toilet-go v0.0.0-20261004205238-af9b836e95f8
 ## explicit; go 1.26.0
 github.com/0magnet/toilet-go/canvas
 github.com/0magnet/toilet-go/figlet
@@ -111,7 +111,7 @@ github.com/0magnet/toilet-go/toilet
 # github.com/0magnet/u-root v0.16.1-0.20261003214924-44e47b732754
 ## explicit; go 1.26.6
 github.com/0magnet/u-root/pkg/ls
-# github.com/0magnet/websh v0.0.1-0.20261004200501-753c425a8b80
+# github.com/0magnet/websh v0.0.1-0.20261005122733-2d8844db30a0
 ## explicit; go 1.26.6
 github.com/0magnet/websh/shell
 github.com/0magnet/websh/shell/sed
@@ -181,7 +181,7 @@ github.com/clipperhouse/uax29/v2/graphemes
 # github.com/containerd/console v1.0.5
 ## explicit; go 1.13
 github.com/containerd/console
-# github.com/dlclark/regexp2/v2 v2.8.2
+# github.com/dlclark/regexp2/v2 v2.8.3
 ## explicit; go 1.25
 github.com/dlclark/regexp2/v2
 github.com/dlclark/regexp2/v2/helpers
