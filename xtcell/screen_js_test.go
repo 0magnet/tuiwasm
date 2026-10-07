@@ -27,6 +27,7 @@ func (f *fakeTerm) OnResize() func(int, int)     { return f.onResize }
 func (f *fakeTerm) SetOnResize(g func(int, int)) { f.onResize = g }
 func (f *fakeTerm) OnData() func(string)         { return f.onData }
 func (f *fakeTerm) SetOnData(g func(string))     { f.onData = g }
+func (f *fakeTerm) id() any                      { return f }
 
 // newTestScreen builds an initialized screen over a fake terminal.
 // js.Undefined() as the element makes every DOM call in bindInput a no-op.
