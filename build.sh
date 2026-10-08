@@ -2,11 +2,10 @@
 # Build the demo into docs/, which is what GitHub Pages serves and what
 # embed.go embeds.
 #
-# Both toolchains are carried. TinyGo is at the root because the binary is a
-# fraction of the size and is fetched before anything appears; the standard Go
-# build is a click away in the page header, because TinyGo occasionally
-# miscompiles something and having the other one to hand is how you find out
-# that is what happened.
+# Both toolchains are carried. The standard Go build is at the root and TinyGo
+# in tinygo/, a click away in the page header: its binary is about half the
+# size, but TinyGo occasionally miscompiles something, and having the other
+# build to hand is how you find out that is what happened.
 #
 #   ./build.sh          both
 #   ./build.sh tinygo   TinyGo only
