@@ -24,65 +24,71 @@ runs the other way, so neither of them pays for a library it does not use.
 
 ## xtcell
 
-`xtcell` makes a tcell program draw into an xterm-go terminal.
+`xtcell` is a `tcell.Screen` (tcell v3) that draws into an xterm-go terminal.
 
 tcell has two screens and the build tags choose between them. `tscreen.go`, the
 terminfo one that speaks ANSI to a tty, is built with `!(js && wasm)` and so
 does not exist in a browser. What does exist is `wscreen.go`, which paints by
-calling functions it expects on the JavaScript global object:
-
-```
-Go -> JS   drawCell(x, y, s, fg, bg, attrs, us, uc)   clearScreen(fg, bg)
-           show()   showCursor(x, y)   setCursorStyle(class, color)
-           resize(w, h)   beep()   setTitle(t)
-
-JS -> Go   onKeyEvent(key, shift, alt, ctrl, meta)
-           onMouseClick   onMouseMove   onFocus   onPaste
-```
-
-tcell ships a `tcell.js` implementing the first list against a DOM grid of its
-own. `xtcell` implements the same list against an xterm-go terminal, by
-translating each call into the escape sequence a real program would write —
-xterm-go is a terminal emulator, so it already knows what to do with them.
+calling a JavaScript global once per cell. Backing that with a Go callback
+makes every cell a Go -> JS -> Go round trip, about 79us each in this browser,
+so a full redraw of a 200x50 window costs hundreds of milliseconds. `xtcell`
+replaces it rather than adapting it: tcell's exported `CellBuffer` holds the
+screen and tracks what is dirty, and the changed cells are written straight
+into xterm-go (`direct_js.go`), or as one escape-sequence string where the
+terminal offers no direct path. Nothing crosses to JavaScript per cell.
 
 ```go
 term := xterm.New(vt.NewOptions())   // not &vt.Options{} — see below
 term.Open(container)
 term.AutoFit()
 
-bridge := xtcell.Attach(term)   // before NewScreen: tcell calls these in Init
-defer bridge.Detach()
+screen := xtcell.New(term, container)   // container: the element term was opened into
+screen.Init()                           // sizes from the terminal, takes the keyboard
+defer screen.Fini()
 
-screen, _ := tcell.NewScreen()
-screen.Init()
-bridge.Bind(screen)             // real size, and follow it
-
-go boxes.Run(screen)            // PollEvent blocks; the page has one goroutine
+go boxes.Run(screen)                    // the page has one thread; run the program in a goroutine
 select {}
 ```
 
 Because `tview` and `termdash` are written against `tcell.Screen`, they come
 along for free.
 
-### Two things worth knowing
+### How it behaves
+
+**Size follows the terminal.** `Init` reads the terminal's columns and rows and
+hooks its resize callback, so a resize reaches the program as a
+`tcell.EventResize`. There is nothing to bind afterwards, and `SetSize` defers
+to the terminal.
 
 **Input does not come through xterm-go.** Its `OnData` gives what a terminal
-sends to a pty (`"\x1b[A"` for up-arrow); tcell's `onKeyEvent` wants the other
-end of that — a DOM `KeyboardEvent.key` name and four modifier booleans — and
-the conversion is lossy, since `"\x03"` cannot say whether it was ctrl-C or a
-literal ETX. Keystrokes are therefore read from a `keydown` listener, which is
-where `tcell.js` reads them too, and xterm-go's encoded copy is suppressed
-while a tcell program is running.
+sends to a pty (`"\x1b[A"` for up-arrow), and turning that back into a key and
+modifiers is lossy: `"\x03"` cannot say whether it was ctrl-C or a literal ETX.
+Keys are read from a `keydown` listener on the terminal's own input textarea
+(not the document, so one window does not receive another's keystrokes), and
+mouse events from listeners on the element. Events arrive on `EventQ()`, which
+`Fini` closes.
 
-**tcell's web screen is 80x24 until told otherwise.** `wscreen.Init` hardcodes
-it and gives the page no way to report a size, so `Bind` pushes the real one in
-through `SetSize` and keeps it current from xterm-go's resize.
+**Several screens take turns for the keyboard, not for drawing.** Each screen
+writes to its own terminal and shares nothing, so any number can run at once.
+A keystroke has one destination, so one screen is current: `Claim()` makes this
+one current and repaints it, and `Active()` reports whether it is, so a host can
+skip frames nobody is looking at. `Suspend()` resets the terminal's styling and
+cursor, and `Resume()` repaints. tcell v2's own wasm screen cannot do this:
+its `Suspend` leaks its mutex, which in a one-thread page stops the whole tab.
 
 **Build the terminal with `vt.NewOptions()`.** The zero value of `vt.Options`
 has a `FontSize` and `LineHeight` of 0, so a cell measures 0x0 and `AutoFit`
 divides the window by that to decide how many rows and columns fit. The page
 does not fail — it wedges, pinning the renderer while it lays out an unbounded
 grid, which from outside is indistinguishable from the wasm never loading.
+
+Paste, focus, clipboard and notification calls are accepted and do nothing.
+
+### xtcell2
+
+`xtcell2` is the same screen against tcell v2, for programs that have not moved
+(the `proxima2` and `widgets` demos). The two packages are separate because the
+tcell major versions have different module paths and can be required together.
 
 ## xwrite
 
@@ -190,35 +196,33 @@ The opening four are tiled rather than cascaded. Cascading is right for a
 desktop, where you work in one window at a time; here three of the four would
 be a title bar.
 
-**The tcell windows take turns.** tcell's wasm screen reaches the page through
-global function names and installs its own `onKeyEvent` among them, so a second
-screen's `Init` overwrites the first's and the keyboard would follow whichever
-initialized last. What makes several windows workable is that tcell already
-knows how to step aside: `Suspend` unsets its `onKeyEvent`, `Resume` puts it
-back. Clicking a window calls `Claim`, which suspends whoever held the globals
-and resumes this one. A suspended screen gets no events, blocks in `PollEvent`
-and stops drawing, so it cannot paint into someone else's terminal.
+**The tcell windows share the screen, not the keyboard.** Each window's `xtcell.Screen` draws into its own terminal, so any number can run at once. A keystroke has one destination, so clicking a window calls `Claim`, which makes that screen current. A window that is behind another is gated: it keeps running but does not paint frames nobody can see, since with several animations open that is what takes the page down.
 
-Text demos have no such limit — they write to their own terminal and share
-nothing, so any number can be open.
+Text demos write to their own terminal and share nothing, so any number can be
+open.
 
 `cmd/showcase` is still there for one demo to a page, with `?demo=name`.
 
 ## Layout
 
 ```
-xtcell/      the tcell adapter; ansi.go is pure Go and tested natively
+xtcell/      the tcell v3 screen; ansi.go is pure Go and tested natively
+xtcell2/     the same against tcell v2
 xwrite/      xterm-go as an io.Writer; also tested natively
+play/        runs one demo in an xterm-go terminal (screen or writer shape)
+deskapp/     puts the demos into desk, one to a window
 demos/       one package per demo, plus the registry
 shims/       files that belong in someone else's module
 cmd/desktop  all demos, windowed — what the site serves
 cmd/showcase one demo per page, with ?demo=name
+cmd/tui      one demo in a real terminal, for comparing behavior
+cmd/gendemos writes the README demo table and docs/demos/ from the registry
 cmd/serve    a native binary that serves the built site, embedded
 embed.go     embeds docs/, so the server needs no checkout
-docs/        the committed build: TinyGo at the root, Go in go/
+docs/        the committed build: Go at the root, TinyGo in tinygo/
 ```
 
-`ansi.go` and `writer.go` hold everything interesting and import nothing from
+`ansi.go` and `writer.go` hold the testable core and import nothing from
 `syscall/js`, so `go test ./...` runs it on a normal machine.
 
 ## Size
@@ -227,13 +231,13 @@ GitHub Pages serves `application/wasm` with `content-encoding: gzip` without
 being asked, so compression needs no configuration at all:
 
 ```
-$ curl -sI -H 'accept-encoding: gzip' https://xterm-go.magnetosphere.net/main.wasm
+$ curl -sI -H 'accept-encoding: gzip' https://tuiwasm.magnetosphere.net/desktop.wasm
 content-type: application/wasm
 content-encoding: gzip
-content-length: 302238        # 867902 uncompressed
+content-length: 5956153       # 21363760 uncompressed
 ```
 
-The binary is 21M, and 4.4M on the wire. Most of it is chroma, which embeds a
+The Go binary is 21M, and 5.9M on the wire; the TinyGo one is 10.6M, and 3.9M. Most of it is chroma, which embeds a
 lexer for every language it knows and is 13M of source on its own — the demos
 without it come to 7.1M.
 
@@ -247,7 +251,7 @@ several, one binary is the right trade.
 ## Building and serving
 
 ```sh
-./build.sh                  # both toolchains -> docs/ and docs/go/
+./build.sh                  # both toolchains -> docs/ (Go) and docs/tinygo/
 ./build.sh tinygo           # TinyGo only
 ./build.sh go               # standard Go only
 
@@ -258,7 +262,7 @@ Both toolchains are carried, and their loader shims are not interchangeable,
 so each build gets its own.
 
 Both builds work. The standard Go build is at the root because it is the one
-that has always worked; the TinyGo build, a third of the size, is a click away.
+that has always worked; the TinyGo build, about half the size, is a click away.
 
 The TinyGo one was broken for a long time and the story is worth keeping. It
 grew its linear memory to 3.44GB during package initialization — grown, not
@@ -317,14 +321,16 @@ gocloc --not-match-d='(vendor|node_modules|\.git)' .
 -------------------------------------------------------------------------------
 Language                     files          blank        comment           code
 -------------------------------------------------------------------------------
-Go                              39            519           1023           2907
-JavaScript                       2            117             82            935
-Markdown                         3             91              2            314
-HTML                             2              0              7            114
+Go                              54            860           1937           5114
+JavaScript                       4            173            258           1664
+Markdown                         3             92              2            337
+HTML                             3              0             12            243
 YAML                             1              0             12            100
-Makefile                         1             19             31             86
-Bourne Shell                     2             14             49             52
+Makefile                         1             19             34             95
+Bourne Shell                     3             23            101             81
+XML                              1              0              0              5
+Plain Text                       1              1              0              3
 -------------------------------------------------------------------------------
-TOTAL                           50            760           1206           4508
+TOTAL                           71           1168           2356           7642
 -------------------------------------------------------------------------------
 ```
