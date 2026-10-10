@@ -21,11 +21,11 @@ github.com/0magnet/afero/mem
 # github.com/0magnet/bottle v0.0.1-0.20261008160757-8052b02bade6
 ## explicit; go 1.24
 github.com/0magnet/bottle/proc
-# github.com/0magnet/calvin v0.0.1-0.20261008155441-86637b449fe0
+# github.com/0magnet/calvin v0.0.1-0.20261010111553-d1d2be37be6a
 ## explicit; go 1.26.0
 github.com/0magnet/calvin
 github.com/0magnet/calvin/clihelp
-# github.com/0magnet/desk v0.0.3-0.20261008155451-5bf2f04167ae
+# github.com/0magnet/desk v0.0.3-0.20261010022904-a9f8e18be9d4
 ## explicit; go 1.26
 github.com/0magnet/desk
 github.com/0magnet/desk/dom
@@ -43,7 +43,7 @@ github.com/0magnet/glamour
 github.com/0magnet/glamour/ansi
 github.com/0magnet/glamour/internal/autolink
 github.com/0magnet/glamour/styles
-# github.com/0magnet/img2txt-go v0.0.1-0.20261008155316-9af9946b28d9
+# github.com/0magnet/img2txt-go v0.0.1-0.20261010111608-9ac2cd47b853
 ## explicit; go 1.26.0
 github.com/0magnet/img2txt-go/caca
 github.com/0magnet/img2txt-go/shape
@@ -66,7 +66,7 @@ github.com/0magnet/sh/v3/internal/arithm
 github.com/0magnet/sh/v3/interp
 github.com/0magnet/sh/v3/pattern
 github.com/0magnet/sh/v3/syntax
-# github.com/0magnet/termanim v0.0.1-0.20261009120018-626c6ba22a81
+# github.com/0magnet/termanim v0.0.1-0.20261010111704-cb045978ae9c
 ## explicit; go 1.26.0
 github.com/0magnet/termanim/aquarium
 github.com/0magnet/termanim/atom
@@ -105,7 +105,7 @@ github.com/0magnet/termanim/snow
 github.com/0magnet/termanim/starfield
 github.com/0magnet/termanim/tunnel
 github.com/0magnet/termanim/wolfram
-# github.com/0magnet/toilet-go v0.0.0-20261008160704-7bc1bf346176
+# github.com/0magnet/toilet-go v0.0.0-20261010111710-2d81119b195a
 ## explicit; go 1.26.0
 github.com/0magnet/toilet-go/canvas
 github.com/0magnet/toilet-go/figlet
@@ -114,7 +114,7 @@ github.com/0magnet/toilet-go/toilet
 # github.com/0magnet/u-root v0.16.1-0.20261003214924-44e47b732754
 ## explicit; go 1.26.6
 github.com/0magnet/u-root/pkg/ls
-# github.com/0magnet/websh v0.0.1-0.20261009120337-d2741378fd8b
+# github.com/0magnet/websh v0.0.1-0.20261010111951-e146c2f6c7a0
 ## explicit; go 1.26.6
 github.com/0magnet/websh/progressive
 github.com/0magnet/websh/shell
@@ -240,9 +240,6 @@ github.com/gdamore/tcell/v3/encoding
 github.com/gdamore/tcell/v3/internal/widthutil
 github.com/gdamore/tcell/v3/tty
 github.com/gdamore/tcell/v3/vt
-# github.com/gookit/color v1.6.1
-## explicit; go 1.18
-github.com/gookit/color
 # github.com/guptarohit/asciigraph v0.10.0
 ## explicit; go 1.11
 github.com/guptarohit/asciigraph
@@ -277,10 +274,11 @@ github.com/muesli/cancelreader
 # github.com/muesli/termenv v0.16.0
 ## explicit; go 1.17
 github.com/muesli/termenv
-# github.com/pterm/pterm v0.12.83
-## explicit; go 1.24.0
+# github.com/pterm/pterm v0.12.84
+## explicit; go 1.26.0
 github.com/pterm/pterm
 github.com/pterm/pterm/internal
+github.com/pterm/pterm/internal/color
 # github.com/rivo/tview v0.42.0
 ## explicit; go 1.18
 github.com/rivo/tview
@@ -312,7 +310,7 @@ github.com/yuin/goldmark/util
 github.com/yuin/goldmark-emoji
 github.com/yuin/goldmark-emoji/ast
 github.com/yuin/goldmark-emoji/definition
-# golang.org/x/image v0.46.0
+# golang.org/x/image v0.47.0
 ## explicit; go 1.26.0
 golang.org/x/image/bmp
 golang.org/x/image/ccitt
@@ -331,10 +329,10 @@ golang.org/x/sync/errgroup
 golang.org/x/sys/plan9
 golang.org/x/sys/unix
 golang.org/x/sys/windows
-# golang.org/x/term v0.46.0
+# golang.org/x/term v0.47.0
 ## explicit; go 1.26.0
 golang.org/x/term
-# golang.org/x/text v0.42.0
+# golang.org/x/text v0.43.0
 ## explicit; go 1.26.0
 golang.org/x/text/cases
 golang.org/x/text/encoding
