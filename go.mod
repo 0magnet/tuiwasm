@@ -4,8 +4,8 @@ go 1.26.7
 
 require (
 	github.com/0magnet/calvin v0.0.1-0.20261011231802-9b916a31f7b1
-	github.com/0magnet/desk v0.0.3-0.20261012010515-d19b1c9ed33a
-	github.com/0magnet/desk/panes v0.0.1-0.20261012010515-d19b1c9ed33a
+	github.com/0magnet/desk v0.0.3-0.20261012010847-aa5ad030f30f
+	github.com/0magnet/desk/panes v0.0.1-0.20261012010847-aa5ad030f30f
 	github.com/0magnet/glamour v1.0.1-0.20261004193946-db176df590f5
 	github.com/0magnet/lolcat-go v0.0.1-0.20261004205030-ebbe4df3258a
 	github.com/0magnet/proxima5 v0.0.0-20260914191450-f19cf6c054fc

@@ -28,11 +28,11 @@ github.com/0magnet/calvin/clihelp
 # github.com/0magnet/coloredcobra v1.0.4-0.20261011230509-d5385cf44398
 ## explicit; go 1.26.0
 github.com/0magnet/coloredcobra
-# github.com/0magnet/desk v0.0.3-0.20261012010515-d19b1c9ed33a
-## explicit; go 1.26.0
+# github.com/0magnet/desk v0.0.3-0.20261012010847-aa5ad030f30f
+## explicit; go 1.26.6
 github.com/0magnet/desk
 github.com/0magnet/desk/dom
-# github.com/0magnet/desk/panes v0.0.1-0.20261012010515-d19b1c9ed33a
+# github.com/0magnet/desk/panes v0.0.1-0.20261012010847-aa5ad030f30f
 ## explicit; go 1.26.6
 github.com/0magnet/desk/panes/files
 github.com/0magnet/desk/panes/hostauth

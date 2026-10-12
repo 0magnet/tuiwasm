@@ -16,10 +16,10 @@ github.com/0magnet/calvin v0.0.1-0.20261011231802-9b916a31f7b1 h1:XinHO/3dBEiILm
 github.com/0magnet/calvin v0.0.1-0.20261011231802-9b916a31f7b1/go.mod h1:DEQrLzLYals86cMu3dfdh4dUr03iZ49GM9KSmWioTxA=
 github.com/0magnet/coloredcobra v1.0.4-0.20261011230509-d5385cf44398 h1:M3jwYEvNP5nFCKReDX7HCArUOEVqgO+yZgJ00qJGLvc=
 github.com/0magnet/coloredcobra v1.0.4-0.20261011230509-d5385cf44398/go.mod h1:XOyBWsYWPuG3gboQHaOve/ubY8HaTqCGjJ+791sF5cM=
-github.com/0magnet/desk v0.0.3-0.20261012010515-d19b1c9ed33a h1:KNC2PCxkH07HUq11K/4+Ff+RDTw2LG2wkmocZQXklPE=
-github.com/0magnet/desk v0.0.3-0.20261012010515-d19b1c9ed33a/go.mod h1:K2xRZNNGbX2/X+PoCFxm8XocqK62Sc688Ep5NRZU32o=
-github.com/0magnet/desk/panes v0.0.1-0.20261012010515-d19b1c9ed33a h1:Q4p5FmDeunUe7yGRfPPJySODqvgK2BTXnI4yI4SVkP0=
-github.com/0magnet/desk/panes v0.0.1-0.20261012010515-d19b1c9ed33a/go.mod h1:mqMzRsk5KSJi9EjdtHeQnZTqFLNuzoM5zpn3MSzyoY4=
+github.com/0magnet/desk v0.0.3-0.20261012010847-aa5ad030f30f h1:kNouC4BDX2MJszusmAwztT8Do6YFxnDpT9thy3QjYEY=
+github.com/0magnet/desk v0.0.3-0.20261012010847-aa5ad030f30f/go.mod h1:LJAucGewRovizkL9jEwD0AU6CxxiGyCrC6glL+pK/kc=
+github.com/0magnet/desk/panes v0.0.1-0.20261012010847-aa5ad030f30f h1:ycNokMlxN29opI28mwK4+cV7iGFi0+92Y/1cTAkyElw=
+github.com/0magnet/desk/panes v0.0.1-0.20261012010847-aa5ad030f30f/go.mod h1:mqMzRsk5KSJi9EjdtHeQnZTqFLNuzoM5zpn3MSzyoY4=
 github.com/0magnet/glamour v1.0.1-0.20261004193946-db176df590f5 h1:THiA0zoa+4TaVmUEzDdUX2hkRiNSR6OYwwXE5k1LwcA=
 github.com/0magnet/glamour v1.0.1-0.20261004193946-db176df590f5/go.mod h1:sQptvwbxHyRamiowc3QuNleMRWr3HlKepEKUOCcha6M=
 github.com/0magnet/img2txt-go v0.0.1-0.20261010111608-9ac2cd47b853 h1:ox1r7x9mnA35QeRZSSypXwsUJ3CLOeollEnr+klBFYY=
