@@ -1,19 +1,17 @@
-// Command tui runs a demo in a real terminal.
+// tui runs a demo in a real terminal.
 //
 // The demos are written against tcell.Screen or an io.Writer and know nothing
 // about the browser, so the same code that draws into a page draws into a
 // terminal. This is the command that proves it, and it is the one to reach for
 // when comparing behavior — key repeat while a key is held, for instance,
 // which a browser reports on its own schedule rather than the terminal's.
-package main
+package commands
 
 import (
 	"fmt"
 	"os"
 	"sort"
-	"strings"
 
-	"github.com/0magnet/calvin/clihelp"
 	tcell2 "github.com/gdamore/tcell/v2"
 	"github.com/gdamore/tcell/v3"
 	"github.com/spf13/cobra"
@@ -38,13 +36,12 @@ import (
 var list bool
 
 func init() {
-	RootCmd.Flags().BoolVarP(&list, "list", "l", false, "list the demos and exit")
-	RootCmd.SetHelpCommand(&cobra.Command{Hidden: true})
-	clihelp.Init(RootCmd, "tui", true)
+	tuiCmd.Flags().BoolVarP(&list, "list", "l", false, "list the demos and exit")
+	RootCmd.AddCommand(tuiCmd)
 }
 
-// RootCmd is the root command
-var RootCmd = &cobra.Command{
+// serveCmd runs a demo in a terminal.
+var tuiCmd = &cobra.Command{
 	Use:                   "tui [demo]",
 	Short:                 "run a demo in this terminal",
 	Long:                  "run a demo in this terminal",
@@ -83,7 +80,7 @@ func listDemos() {
 		}
 		fmt.Printf("  %-10s %-6s %s\n", d.Name, kind, d.Desc)
 	}
-	fmt.Println("\nrun one with: tui <name>")
+	fmt.Println("\nrun one with: tuiwasm tui <name>")
 }
 
 // runScreen gives the demo a real terminal screen.
@@ -131,11 +128,4 @@ func runText(d demos.Demo) error {
 		cols, rows = w, h
 	}
 	return d.Text(os.Stdout, cols, rows)
-}
-
-func main() {
-	if err := RootCmd.Execute(); err != nil {
-		fmt.Fprintln(os.Stderr, strings.TrimSpace(err.Error()))
-		os.Exit(1)
-	}
 }

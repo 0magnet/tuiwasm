@@ -1,4 +1,4 @@
-// Command serve serves the built demo from a single binary.
+// serve serves the built demo from a single binary.
 //
 // The page, both wasm builds and their loader shims are embedded, so this
 // needs no checkout, no network and nothing else installed. It exists because
@@ -9,7 +9,7 @@
 // It serves what GitHub Pages will serve, as Pages will serve it: same
 // layout, same paths, and gzip on the wasm, so what you try locally is what a
 // visitor gets.
-package main
+package commands
 
 import (
 	"compress/gzip"
@@ -24,7 +24,6 @@ import (
 	"strings"
 	"time"
 
-	"github.com/0magnet/calvin/clihelp"
 	"github.com/spf13/cobra"
 
 	"github.com/0magnet/tuiwasm"
@@ -37,15 +36,14 @@ var (
 )
 
 func init() {
-	RootCmd.Flags().StringVarP(&addr, "addr", "a", "127.0.0.1:8780", "address to listen on")
-	RootCmd.Flags().BoolVarP(&open, "open", "o", true, "open a browser at the served page")
-	RootCmd.Flags().BoolVar(&nogzip, "no-gzip", false, "serve uncompressed, to see what the wasm costs on the wire")
-	RootCmd.SetHelpCommand(&cobra.Command{Hidden: true})
-	clihelp.Init(RootCmd, "tuiwasm", true)
+	serveCmd.Flags().StringVarP(&addr, "addr", "a", "127.0.0.1:8780", "address to listen on")
+	serveCmd.Flags().BoolVarP(&open, "open", "o", true, "open a browser at the served page")
+	serveCmd.Flags().BoolVar(&nogzip, "no-gzip", false, "serve uncompressed, to see what the wasm costs on the wire")
+	RootCmd.AddCommand(serveCmd)
 }
 
-// RootCmd is the root command
-var RootCmd = &cobra.Command{
+// serveCmd serves the built demo.
+var serveCmd = &cobra.Command{
 	Use:                   "serve",
 	Short:                 "serve the built demo, as GitHub Pages would",
 	Long:                  "serve the built demo, as GitHub Pages would",
@@ -83,12 +81,6 @@ var RootCmd = &cobra.Command{
 		srv := &http.Server{Handler: noCache(h), ReadHeaderTimeout: 10 * time.Second}
 		log.Fatal(srv.Serve(ln))
 	},
-}
-
-func main() {
-	if err := RootCmd.Execute(); err != nil {
-		log.Fatal("Failed to execute command: ", err)
-	}
 }
 
 // gzipping compresses responses the way GitHub Pages does.

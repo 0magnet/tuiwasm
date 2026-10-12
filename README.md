@@ -215,9 +215,8 @@ demos/       one package per demo, plus the registry
 shims/       files that belong in someone else's module
 cmd/desktop  all demos, windowed — what the site serves
 cmd/showcase one demo per page, with ?demo=name
-cmd/tui      one demo in a real terminal, for comparing behavior
+cmd/tuiwasm  the one command: `serve` the built site, `tui` a demo in a terminal
 cmd/gendemos writes the README demo table and docs/demos/ from the registry
-cmd/serve    a native binary that serves the built site, embedded
 embed.go     embeds docs/, so the server needs no checkout
 docs/        the committed build: Go at the root, TinyGo in tinygo/
 ```
@@ -255,7 +254,8 @@ several, one binary is the right trade.
 ./build.sh tinygo           # TinyGo only
 ./build.sh go               # standard Go only
 
-go run ./cmd/serve          # serve the built demo, open a browser
+go run ./cmd/tuiwasm serve        # serve the built demo, open a browser
+go run ./cmd/tuiwasm tui --list    # run a demo in a real terminal
 ```
 
 Both toolchains are carried, and their loader shims are not interchangeable,
