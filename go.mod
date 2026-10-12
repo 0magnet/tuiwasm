@@ -3,15 +3,15 @@ module github.com/0magnet/tuiwasm
 go 1.26.7
 
 require (
-	github.com/0magnet/calvin v0.0.1-0.20261011230737-763f06d9d646
-	github.com/0magnet/desk v0.0.3-0.20261011000720-9155986fa3a1
-	github.com/0magnet/desk/panes v0.0.1-0.20261011000720-9155986fa3a1
+	github.com/0magnet/calvin v0.0.1-0.20261011231802-9b916a31f7b1
+	github.com/0magnet/desk v0.0.3-0.20261012010515-d19b1c9ed33a
+	github.com/0magnet/desk/panes v0.0.1-0.20261012010515-d19b1c9ed33a
 	github.com/0magnet/glamour v1.0.1-0.20261004193946-db176df590f5
 	github.com/0magnet/lolcat-go v0.0.1-0.20261004205030-ebbe4df3258a
 	github.com/0magnet/proxima5 v0.0.0-20260914191450-f19cf6c054fc
 	github.com/0magnet/proxima5/v2 v2.0.0-20260902091202-e45c029b343b
-	github.com/0magnet/termanim v0.0.1-0.20261011113000-e10d331f8bc7
-	github.com/0magnet/toilet-go v0.0.0-20261010111710-2d81119b195a
+	github.com/0magnet/termanim v0.0.1-0.20261012010327-5df33e35e7fd
+	github.com/0magnet/toilet-go v0.0.0-20261012010308-c808be6d9a33
 	github.com/0magnet/xterm-go v0.0.1-0.20261011000522-9adb4a350db6
 	github.com/charmbracelet/lipgloss v1.1.1-0.20250404203927-76690c660834
 	github.com/gdamore/tcell/v2 v2.13.10
@@ -45,8 +45,8 @@ require (
 	github.com/0magnet/afero v1.15.1-0.20261003211811-482680d00992 // indirect
 	github.com/0magnet/sh/v3 v3.13.2-0.20261004194540-aa2d6e4a31a5
 	github.com/0magnet/u-root v0.16.1-0.20261003214924-44e47b732754 // indirect
-	github.com/0magnet/websh v0.0.1-0.20261011113820-e0c0f4c7c5b6
-	github.com/0magnet/winbox-go v0.0.1-0.20261008155453-e5e3ca2e9451 // indirect
+	github.com/0magnet/websh v0.0.1-0.20261012010421-aa9f8595d2d0
+	github.com/0magnet/winbox-go v0.0.1-0.20261012010320-88f1679695ed // indirect
 	github.com/alecthomas/chroma/v2 v2.27.0 // indirect
 	github.com/aymanbagabas/go-osc52/v2 v2.0.1 // indirect
 	github.com/benhoyt/goawk v1.32.0 // indirect
