@@ -53,7 +53,7 @@ github.com/0magnet/img2txt-go/shape
 # github.com/0magnet/lolcat-go v0.0.1-0.20261013220959-57aa27491489
 ## explicit; go 1.25.0
 github.com/0magnet/lolcat-go/lol
-# github.com/0magnet/proxima5 v0.0.0-20260914191450-f19cf6c054fc
+# github.com/0magnet/proxima5 v0.0.0-20261014235132-1143d38a91d3
 ## explicit; go 1.26.0
 github.com/0magnet/proxima5
 github.com/0magnet/proxima5/internal/views

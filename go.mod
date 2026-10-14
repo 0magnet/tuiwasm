@@ -8,7 +8,7 @@ require (
 	github.com/0magnet/desk/panes v0.0.1-0.20261014102549-2f8ddfb9a265
 	github.com/0magnet/glamour v1.0.1-0.20261004193946-db176df590f5
 	github.com/0magnet/lolcat-go v0.0.1-0.20261013220959-57aa27491489
-	github.com/0magnet/proxima5 v0.0.0-20260914191450-f19cf6c054fc
+	github.com/0magnet/proxima5 v0.0.0-20261014235132-1143d38a91d3
 	github.com/0magnet/proxima5/v2 v2.0.0-20260902091202-e45c029b343b
 	github.com/0magnet/termanim v0.0.1-0.20261013224625-c801aece6dff
 	github.com/0magnet/toilet-go v0.0.0-20261013224629-4749634a6d85

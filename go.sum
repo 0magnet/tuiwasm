@@ -26,8 +26,8 @@ github.com/0magnet/img2txt-go v0.0.1-0.20261013220954-ae0d760b7d2b h1:TvuDIGb7WM
 github.com/0magnet/img2txt-go v0.0.1-0.20261013220954-ae0d760b7d2b/go.mod h1:M/nZ3W+0x5ti9fZDs6Cx+6eTZnwVdGMjeMuRDmOB5es=
 github.com/0magnet/lolcat-go v0.0.1-0.20261013220959-57aa27491489 h1:e9oQciGjDuTPFtS0t9cX+C6pOcVVIJIsa5AjcTPsjtA=
 github.com/0magnet/lolcat-go v0.0.1-0.20261013220959-57aa27491489/go.mod h1:DbbClVrvQ558CvwGWU78xx0k03aEY/uS9qf5Wtw+n3o=
-github.com/0magnet/proxima5 v0.0.0-20260914191450-f19cf6c054fc h1:6y75eIwQ0EswyiujMlGQxGHdaecl+qzYm17iRLn/Gy8=
-github.com/0magnet/proxima5 v0.0.0-20260914191450-f19cf6c054fc/go.mod h1:tZ3EqtPbE2DQAzgP2iBdVgvPANj/EJBfGs/hAZRdBNo=
+github.com/0magnet/proxima5 v0.0.0-20261014235132-1143d38a91d3 h1:uGsioDxMBM55YTUf8I/uIFtN5UKEhu/MMt0H/Z8OPMY=
+github.com/0magnet/proxima5 v0.0.0-20261014235132-1143d38a91d3/go.mod h1:tZ3EqtPbE2DQAzgP2iBdVgvPANj/EJBfGs/hAZRdBNo=
 github.com/0magnet/proxima5/v2 v2.0.0-20260902091202-e45c029b343b h1:416NgclNHUFh+RddRvl0QhHs+HclUBhdLLWcGBKTr6w=
 github.com/0magnet/proxima5/v2 v2.0.0-20260902091202-e45c029b343b/go.mod h1:f/1Bew8ifezklzYn6ZYOa0S1NfxCwZysCYigBQmYZOM=
 github.com/0magnet/sh/v3 v3.13.2-0.20261004194540-aa2d6e4a31a5 h1:phE5/F4rBgh+VE51tU7Y6ZusHkQnECwIBBZHQJf7S5M=
