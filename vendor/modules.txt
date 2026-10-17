@@ -28,11 +28,11 @@ github.com/0magnet/calvin/clihelp
 # github.com/0magnet/coloredcobra v1.0.4-0.20261012213101-faa6bd8f94c5
 ## explicit; go 1.26.0
 github.com/0magnet/coloredcobra
-# github.com/0magnet/desk v0.0.3-0.20261016095909-69e7bc7ac63c
+# github.com/0magnet/desk v0.0.3-0.20261017093540-c9579830f467
 ## explicit; go 1.26.6
 github.com/0magnet/desk
 github.com/0magnet/desk/dom
-# github.com/0magnet/desk/panes v0.0.1-0.20261016095909-69e7bc7ac63c
+# github.com/0magnet/desk/panes v0.0.1-0.20261017093540-c9579830f467
 ## explicit; go 1.26.6
 github.com/0magnet/desk/panes/files
 github.com/0magnet/desk/panes/hostauth
@@ -117,7 +117,7 @@ github.com/0magnet/toilet-go/toilet
 # github.com/0magnet/u-root v0.16.1-0.20261003214924-44e47b732754
 ## explicit; go 1.26.6
 github.com/0magnet/u-root/pkg/ls
-# github.com/0magnet/websh v0.0.1-0.20261013225449-0d54b04ae8e4
+# github.com/0magnet/websh v0.0.1-0.20261017093436-7bef6ef3dc58
 ## explicit; go 1.26.6
 github.com/0magnet/websh/progressive
 github.com/0magnet/websh/shell
@@ -189,7 +189,7 @@ github.com/clipperhouse/uax29/v2/graphemes
 # github.com/containerd/console v1.0.5
 ## explicit; go 1.13
 github.com/containerd/console
-# github.com/dlclark/regexp2/v2 v2.9.0
+# github.com/dlclark/regexp2/v2 v2.9.1
 ## explicit; go 1.25
 github.com/dlclark/regexp2/v2
 github.com/dlclark/regexp2/v2/helpers
