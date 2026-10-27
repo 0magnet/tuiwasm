@@ -28,11 +28,11 @@ github.com/0magnet/calvin/clihelp
 # github.com/0magnet/coloredcobra v1.0.4-0.20261012213101-faa6bd8f94c5
 ## explicit; go 1.26.0
 github.com/0magnet/coloredcobra
-# github.com/0magnet/desk v0.0.3-0.20261026111802-a56114b97dbc
+# github.com/0magnet/desk v0.0.3-0.20261027104449-0b1beca7de30
 ## explicit; go 1.26.6
 github.com/0magnet/desk
 github.com/0magnet/desk/dom
-# github.com/0magnet/desk/panes v0.0.1-0.20261026111802-a56114b97dbc
+# github.com/0magnet/desk/panes v0.0.1-0.20261027104449-0b1beca7de30
 ## explicit; go 1.26.6
 github.com/0magnet/desk/panes/files
 github.com/0magnet/desk/panes/hostauth
@@ -189,7 +189,7 @@ github.com/clipperhouse/uax29/v2/graphemes
 # github.com/containerd/console v1.0.5
 ## explicit; go 1.13
 github.com/containerd/console
-# github.com/dlclark/regexp2/v2 v2.10.1
+# github.com/dlclark/regexp2/v2 v2.11.0
 ## explicit; go 1.25
 github.com/dlclark/regexp2/v2
 github.com/dlclark/regexp2/v2/helpers
