@@ -118,6 +118,7 @@ var indexTmpl = htmpl.Must(htmpl.New("demos").Parse(`<!DOCTYPE html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{{.Title}}</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect x='1' y='2' width='14' height='12' fill='none' stroke='%238ae234' stroke-width='1.2'/%3E%3Cpath d='M7 2v12M7 8h8' stroke='%238ae234' stroke-width='1.2'/%3E%3Cpath d='M2.8 5h2.6M2.8 7.5h2.6M2.8 10h2.6' stroke='%238fc6f0' stroke-width='1'/%3E%3C/svg%3E">
 <meta name="description" content="{{.Desc}}">
 <meta name="author" content="0magnet">
 <link rel="canonical" href="{{.Canonical}}">
