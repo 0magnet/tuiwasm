@@ -3,14 +3,14 @@ module github.com/0magnet/tuiwasm
 go 1.26.7
 
 require (
-	github.com/0magnet/calvin v0.0.1-0.20261013221715-da6581155df3
-	github.com/0magnet/desk v0.0.3-0.20261105132841-27c3b9594ed8
-	github.com/0magnet/desk/panes v0.0.1-0.20261105132454-f15a8c2b0abb
+	github.com/0magnet/calvin v0.0.1-0.20261106130306-95511d0b3e30
+	github.com/0magnet/desk v0.0.3-0.20261106131250-2e9fa7348e74
+	github.com/0magnet/desk/panes v0.0.1-0.20261106130938-d6a9eac1d7f6
 	github.com/0magnet/glamour v1.0.1-0.20261004193946-db176df590f5
 	github.com/0magnet/lolcat-go v0.0.1-0.20261013220959-57aa27491489
 	github.com/0magnet/proxima5 v0.0.0-20261014235132-1143d38a91d3
 	github.com/0magnet/proxima5/v2 v2.0.0-20260902091202-e45c029b343b
-	github.com/0magnet/termanim v0.0.1-0.20261103154306-86931e121556
+	github.com/0magnet/termanim v0.0.1-0.20261106130413-51611885f60b
 	github.com/0magnet/toilet-go v0.0.0-20261013224629-4749634a6d85
 	github.com/0magnet/xterm-go v0.0.1-0.20261102175652-6023ed24df89
 	github.com/charmbracelet/lipgloss v1.1.1-0.20250404203927-76690c660834
@@ -45,8 +45,8 @@ require (
 	github.com/0magnet/afero v1.15.1-0.20261003211811-482680d00992 // indirect
 	github.com/0magnet/sh/v3 v3.13.2-0.20261024150911-145e01c63128
 	github.com/0magnet/u-root v0.16.1-0.20261003214924-44e47b732754 // indirect
-	github.com/0magnet/websh v0.0.1-0.20261105132335-53fe5dca2fec
-	github.com/0magnet/winbox-go v0.0.1-0.20261028211148-34d6e7c4492d // indirect
+	github.com/0magnet/websh v0.0.1-0.20261106130811-12119f3c57f3
+	github.com/0magnet/winbox-go v0.0.1-0.20261106130421-357df562ff6c // indirect
 	github.com/alecthomas/chroma/v2 v2.27.0 // indirect
 	github.com/aymanbagabas/go-osc52/v2 v2.0.1 // indirect
 	github.com/benhoyt/goawk v1.32.0 // indirect
@@ -71,7 +71,7 @@ require (
 	github.com/mattn/go-runewidth v0.0.31 // indirect
 	github.com/muesli/termenv v0.16.0 // indirect
 	github.com/rivo/uniseg v0.4.7 // indirect
-	github.com/spf13/pflag v1.0.10 // indirect
+	github.com/spf13/pflag v1.1.0 // indirect
 	github.com/xo/terminfo v1.3.1 // indirect
 	github.com/yuin/goldmark v1.8.7 // indirect
 	github.com/yuin/goldmark-emoji v1.0.6 // indirect
