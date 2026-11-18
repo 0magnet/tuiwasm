@@ -4,8 +4,8 @@ go 1.26.7
 
 require (
 	github.com/0magnet/calvin v0.0.1-0.20261109140133-887794fc87eb
-	github.com/0magnet/desk v0.0.3-0.20261117144703-a6271426ed4c
-	github.com/0magnet/desk/panes v0.0.1-0.20261117144341-cfddf77192f8
+	github.com/0magnet/desk v0.0.3-0.20261118144752-512ef97c8f48
+	github.com/0magnet/desk/panes v0.0.1-0.20261118144505-d7da5485accf
 	github.com/0magnet/glamour v1.0.1-0.20261004193946-db176df590f5
 	github.com/0magnet/lolcat-go v0.0.1-0.20261013220959-57aa27491489
 	github.com/0magnet/proxima5 v0.0.0-20261014235132-1143d38a91d3
@@ -45,20 +45,20 @@ require (
 	github.com/0magnet/afero v1.15.1-0.20261003211811-482680d00992 // indirect
 	github.com/0magnet/sh/v3 v3.13.2-0.20261024150911-145e01c63128
 	github.com/0magnet/u-root v0.16.1-0.20261003214924-44e47b732754 // indirect
-	github.com/0magnet/websh v0.0.1-0.20261114122934-ffd57803ff74
+	github.com/0magnet/websh v0.0.1-0.20261118144207-c27375f65f2c
 	github.com/0magnet/winbox-go v0.0.1-0.20261109140257-4c5c0e948cd6 // indirect
 	github.com/alecthomas/chroma/v2 v2.27.0 // indirect
 	github.com/aymanbagabas/go-osc52/v2 v2.0.1 // indirect
 	github.com/benhoyt/goawk v1.32.0 // indirect
 	github.com/charmbracelet/colorprofile v0.4.3 // indirect
-	github.com/charmbracelet/x/ansi v0.11.9 // indirect
+	github.com/charmbracelet/x/ansi v0.11.10 // indirect
 	github.com/charmbracelet/x/cellbuf v0.0.15 // indirect
 	github.com/charmbracelet/x/exp/slice v0.1.0 // indirect
 	github.com/charmbracelet/x/term v0.2.2 // indirect
 	github.com/clipperhouse/displaywidth v0.11.0 // indirect
 	github.com/clipperhouse/uax29/v2 v2.7.0 // indirect
 	github.com/containerd/console v1.0.5 // indirect
-	github.com/dlclark/regexp2/v2 v2.13.0 // indirect
+	github.com/dlclark/regexp2/v2 v2.13.1 // indirect
 	github.com/dustin/go-humanize v1.1.0 // indirect
 	github.com/gdamore/encoding v1.0.1 // indirect
 	github.com/gdamore/tcell/v3 v3.6.0
