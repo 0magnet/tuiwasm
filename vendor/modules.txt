@@ -28,11 +28,11 @@ github.com/0magnet/calvin/clihelp
 # github.com/0magnet/coloredcobra v1.0.4-0.20261012213101-faa6bd8f94c5
 ## explicit; go 1.26.0
 github.com/0magnet/coloredcobra
-# github.com/0magnet/desk v0.0.3-0.20261118144752-512ef97c8f48
+# github.com/0magnet/desk v0.0.3-0.20261119144259-6c81d74bee30
 ## explicit; go 1.26.6
 github.com/0magnet/desk
 github.com/0magnet/desk/dom
-# github.com/0magnet/desk/panes v0.0.1-0.20261118144505-d7da5485accf
+# github.com/0magnet/desk/panes v0.0.1-0.20261119143844-027780e505d5
 ## explicit; go 1.26.6
 github.com/0magnet/desk/panes/files
 github.com/0magnet/desk/panes/hostauth
@@ -117,7 +117,7 @@ github.com/0magnet/toilet-go/toilet
 # github.com/0magnet/u-root v0.16.1-0.20261003214924-44e47b732754
 ## explicit; go 1.26.6
 github.com/0magnet/u-root/pkg/ls
-# github.com/0magnet/websh v0.0.1-0.20261118144207-c27375f65f2c
+# github.com/0magnet/websh v0.0.1-0.20261119143717-a2461de73980
 ## explicit; go 1.26.6
 github.com/0magnet/websh/progressive
 github.com/0magnet/websh/shell
@@ -157,7 +157,7 @@ github.com/charmbracelet/colorprofile
 # github.com/charmbracelet/lipgloss v1.1.1-0.20250404203927-76690c660834
 ## explicit; go 1.18
 github.com/charmbracelet/lipgloss
-# github.com/charmbracelet/ultraviolet v0.0.0-20261023060817-a45b7c86333f
+# github.com/charmbracelet/ultraviolet v0.0.0-20261119104433-f0c8309c9960
 ## explicit; go 1.26.0
 github.com/charmbracelet/ultraviolet
 # github.com/charmbracelet/x/ansi v0.11.10
