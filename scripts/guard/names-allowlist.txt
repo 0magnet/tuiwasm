@@ -1,0 +1,2 @@
+xtcell/screen_js.go:Screen.Get
+xtcell2/screen_js.go:Screen.Get

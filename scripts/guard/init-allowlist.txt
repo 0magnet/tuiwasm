@@ -1,0 +1,15 @@
+cmd/tuiwasm/commands/root.go
+cmd/tuiwasm/commands/serve.go
+cmd/tuiwasm/commands/tui.go
+demos/anim/anim.go
+demos/charts/charts.go
+demos/markdown/markdown.go
+demos/proxima/demo.go
+demos/proxima2/demo.go
+demos/pterm/pterm.go
+demos/styles/styles.go
+demos/tables/tables.go
+demos/upstream/boxes/run.go
+demos/upstream/colors/run.go
+demos/upstream/unicode/run.go
+demos/widgets/demo.go
