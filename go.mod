@@ -4,13 +4,13 @@ go 1.26.7
 
 require (
 	github.com/0magnet/calvin v0.0.1-0.20261123113739-17ec6c31723c
-	github.com/0magnet/desk v0.0.3-0.20261124162943-5a94801eada7
-	github.com/0magnet/desk/panes v0.0.1-0.20261124162518-6775686f1d7a
+	github.com/0magnet/desk v0.0.3-0.20261125155545-690be9f15c7c
+	github.com/0magnet/desk/panes v0.0.1-0.20261125155205-1a4d5fd9a8b8
 	github.com/0magnet/glamour v1.0.1-0.20261004193946-db176df590f5
 	github.com/0magnet/lolcat-go v0.0.1-0.20261123111453-dec4f447c5e5
 	github.com/0magnet/proxima5 v0.0.0-20261014235132-1143d38a91d3
 	github.com/0magnet/proxima5/v2 v2.0.0-20260902091202-e45c029b343b
-	github.com/0magnet/termanim v0.0.1-0.20261123161137-9b9cec0fc245
+	github.com/0magnet/termanim v0.0.1-0.20261125035614-47ce7bc89a83
 	github.com/0magnet/toilet-go v0.0.0-20261123112025-a6a2cc530103
 	github.com/0magnet/xterm-go v0.0.1-0.20261123110635-ef9c274ca8f7
 	github.com/charmbracelet/lipgloss v1.1.1-0.20250404203927-76690c660834
@@ -28,7 +28,7 @@ require (
 	github.com/0magnet/bottle v0.0.1-0.20261028202309-2b922f28f74e // indirect
 	github.com/0magnet/coloredcobra v1.0.4-0.20261012213101-faa6bd8f94c5 // indirect
 	github.com/0magnet/img2txt-go v0.0.1-0.20261123111343-1b18c2c35849 // indirect
-	github.com/charmbracelet/ultraviolet v0.0.0-20261119151026-8ecbcf0e188c // indirect
+	github.com/charmbracelet/ultraviolet v0.0.0-20261125122737-8ed499892fb4 // indirect
 	github.com/charmbracelet/x/termios v0.1.1 // indirect
 	github.com/charmbracelet/x/windows v0.2.2 // indirect
 	github.com/fatih/color v1.19.0 // indirect
@@ -45,7 +45,7 @@ require (
 	github.com/0magnet/afero v1.15.1-0.20261003211811-482680d00992 // indirect
 	github.com/0magnet/sh/v3 v3.13.2-0.20261024150911-145e01c63128
 	github.com/0magnet/u-root v0.16.1-0.20261003214924-44e47b732754 // indirect
-	github.com/0magnet/websh v0.0.1-0.20261124162130-3e2dd700684d
+	github.com/0magnet/websh v0.0.1-0.20261125155041-38c9124db3d6
 	github.com/0magnet/winbox-go v0.0.1-0.20261123161251-43842cba2e0c // indirect
 	github.com/alecthomas/chroma/v2 v2.27.0 // indirect
 	github.com/aymanbagabas/go-osc52/v2 v2.0.1 // indirect
